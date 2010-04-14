@@ -1,0 +1,14 @@
+# Ignore all audio files
+*.aup
+*_data/
+*.mp3
+*.m4a
+
+# Ignore all Audacity output
+*- Singles
+*.tar.*
+*.tar.*
+*.zip
+
+# Ignore OS-specific files
+.DS_Store
