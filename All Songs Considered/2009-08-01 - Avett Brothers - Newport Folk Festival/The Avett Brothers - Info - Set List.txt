@@ -1,13 +1,30 @@
-Set List:
-1.  Left on Laura, Left on Lisa xx:xx
-    Paranoia in B Flat Major    xx:xx
-    Murder in the City          xx:xx
-    Kick Drum Heart             xx:xx
-5.  Denouncing November Blue    xx:xx
-    Distraction #74             xx:xx
-    Ballad of Love and Hate     xx:xx
-    Go to Sleep                 xx:xx
-    Down With the Shine         xx:xx
-10. I Would Be Sad              xx:xx
-    Talk on Indolence           xx:xx
-12. The Perfect Space           xx:xx
+Set List
+========
+
+URL: http://www.npr.org/templates/story/story.php?storyId=111329995
+
+#   Track Name                  Start At
+==============                  ========
+    (ad)                        00:00
+    (intro)                     00:22
+1.  Left on Laura, Left on Lisa 00:39
+    Paranoia in B Flat Major    06:19
+    Murder in the City          10:17
+    (talking)                   13:39
+    Kick Drum Heart             14:53
+    (silence)                   17:45
+5.  Denouncing November Blue    18:14
+    Distraction #74             22:21
+    (silence)                   24:42
+    Ballad of Love and Hate     25:07
+    Go to Sleep                 31:20
+    Down With the Shine         35:22
+    (talking)                   38:51
+10. I Would Be Sad              39:20
+    Dream Appointed             43:29   http://www.theavettbrothers.com/us/forums/dream-appointed-0
+    Talk on Indolence           46:48
+    (break)                     51:02
+    (slience)                   52:02
+13. The Perfect Space           52:40
+    (outro)                     57:49
+    (end)                       58:43

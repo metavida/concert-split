@@ -1,0 +1,26 @@
+Set List
+========
+
+URL: http://www.npr.org/templates/story/story.php?storyId=14810080
+
+#   Track Name                Start At
+==============                ========
+1.  Storm                     00:00
+    Hints                     xx:xx
+    Suggestions               xx:xx
+    Heartbeats                xx:xx
+5.  All You Deliver           xx:xx
+    Stay in the Shade         xx:xx
+    In Our Nature             xx:xx
+    How Low                   xx:xx
+    Lovestain                 xx:xx
+10. Remain                    xx:xx
+    Down the Line             xx:xx
+    Killing for Love          xx:xx
+    Cycling Trivialities      xx:xx
+    Teardrop                  xx:xx
+15. Deadweight on Velveteen   xx:xx
+    Crosses                   xx:xx
+    Time to Send Someone Away xx:xx
+18. Small Town Boy            xx:xx
+    (end)                     xx:xx
