@@ -1,1 +1,5 @@
+# Ignore system files
+*.DS_Store
+
+# Ignore all concert data from the master branch
 All Songs Considered

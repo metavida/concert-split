@@ -16,6 +16,7 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 body { background: #fff; color: #000; }
 
 /*#songs { width: 90%; background: #fff; color: #000; }*/
+#songs_loading { margin-left: 1em; }
 
 #description_icons { border-left: 5px solid #ccc; padding-left: 20px; }
 #description_icons > div { position: relative; float: left; width: 15em; }
