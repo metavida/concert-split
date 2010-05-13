@@ -8,9 +8,9 @@
   <meta name="keywords" content="concert, audio, music, split, tracks, audacity, npr" />
   
 	<title>The Concert-Split Project</title>
-	<link charset="utf-8" href="stylesheets/base.css" rel="stylesheet" type="text/css" />
+	<link charset="utf-8" href="stylesheets/base.css?1" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script type="text/javascript" src="javascripts/base.js"></script>
+	<script type="text/javascript" src="javascripts/base.js?2"></script>
 </head>
 <body>
   
@@ -23,15 +23,15 @@
     A collaborative effort to make it simpler to split live, concert audio into individual tracks. Initially focusing on the excellent NPR music collection.
   </p>
 
-  <p>So, you've found a great live concert recording on <a href="nprmusic.org">nprmusic.org</a> or an NPR Podcast &amp; listen to it all the time. The problem, is that it's hard, if not impossible, to find any specific song in the hour-long recording. Plus, if it doesn't <a href="http://en.wiktionary.org/wiki/scrobble#Verb">scrobble</a>, it doesn't count.</p>
+  <p>So, you've found a great, live concert recording on <a href="nprmusic.org">nprmusic.org</a> or an <a href="http://www.npr.org/templates/rss/podlayer.php?id=510253">NPR Podcast</a> &amp; listen to it all the time. The problem is that it's hard, if not impossible, to find any specific song in the hour-long recording. Plus, if it doesn't <a href="http://en.wiktionary.org/wiki/scrobble#Verb">scrobble</a>, it doesn't count.</p>
 
-  <p>The Concert-Split project is my attempt to solve this problem. Using Audacity &amp; and a list of track "labels" it's easy to split concert recordings into individual tracks. Perfect for your personal, casual listening.</p>
+  <p>The Concert-Split Project is my attempt to solve this problem. Using Audacity &amp; and a list of track &quot;labels,&quot; it's easy to split concert recordings into individual tracks. Perfect for your personal, casual listening.</p>
   
-  <div id="description_icons" class="clearfix">
+  <div id="description_icons" class="details clearfix">
     <div class="music_big">
       <span>
         <img src="images/music_big.png" alt="A single music file" align="middle" />
-        One-big-concert.mp3
+        one-big-concert.mp3
       </span>
     </div>
     <div class="split_arrow">
@@ -40,42 +40,56 @@
     <div class="music_lil">
       <span class="lil_1">
         <img src="images/music_lil.png" alt="Many music files" />
-        Big-concert Track 1.mp3
+        big-concert track 1.mp3
       </span>
       <span class="lil_2">
         <img src="images/music_lil.png" alt="Many music files" />
-        Big-concert Track 2.mp3
+        big-concert track 2.mp3
       </span>
       <span class="lil_3">
         <img src="images/music_lil.png" alt="Many music files" />
-        Big-concert Track 3.mp3
+        big-concert track 3.mp3
       </span>
       <span class="lil_4">
         <img src="images/music_lil.png" alt="Many music files" />
-        Big-concert Track 4.mp3
+        big-concert track 4.mp3
       </span>
       <span class="lil_5">
         <img src="images/music_lil.png" alt="Many music files" />
-        Big-concert Track 5.mp3
+        big-concert track 5.mp3
       </span>
     </div>
   </div>
 
+  <a name="usage"></a>
   <h2>Using Concert-Split</h2>
-  <div id="no_js">
-    <p>First, find a concert that you're interested in splitting. You can browse &amp; download Audacity Label files <a href="http://github.com/metavida/concert-split/tree/master/All%20Songs%20Considered/">via the GitHub interface</a>.</p>
+  <div class="details" style="float:right; width: 300px; height: 200px;">
+    <div style="text-align:center; margin-top: 75px;">Sorry, the video isn't quite done yet.</div>
   </div>
   
+  <p>
+    First things first, find a concert that you're interested in splitting.
+    <span id="no_js">You can browse &amp; download Audacity Label files <a href="http://github.com/metavida/concert-split/tree/master/All%20Songs%20Considered/">via the GitHub interface</a>.</span>
+    <span id="has_js">The concerts listed below are ready to split.</span>
+  </p>
+  
+  <p>Now, watch the one minute screencast, at right, to get started.</p>
+  
+  <p>If you don't see a concert you want to split, help us out. <a href="#contribute">Contribute to the project</a> by suggesting the concert.</p>
+  
 	<div id="songs">
-	  <p>First, find a concert that you're interested in splitting. Here's a list of the concerts that are ready to split.</p>
 	  <img id="songs_loading" src="images/loading.gif" alt="Loading Data...">
 	</div>
-
-  <p>To do the actual splitting of concert audio files, you'll need to download the <a href="http://audacity.sourceforge.net">Audacity</a> audio editor.</p>
   
-  <p>Unfortunately, I haven't had a chance to flesh out a the full list of instructions, but stay tuned for further instructions &amp; a helpful getting started video.</p>
+  <a name="resources"></a>
+  <h2>Required Tools</h2>
+  <ul>
+    <li>The <a href="http://audacity.sourceforge.net">Audacity</a> audio editor</li>
+    <li>That's it :-)</li>
+  </ul>
 
-  <h2>Contributing to the Concert-Split Project</h2>
+  <a name="contribute"></a>
+  <h2>Contributing to the project</h2>
   <p>If you know of an NPR concert that you'd like to be able to split, or if you already have a set list or timestamps for a concert, please <a href="http://github.com/metavida/concert-split/issues">create a new issue</a> for the request.</p>
   
   <p>If you're a git user user, you can also <a href="http://github.com/metavida/concert-split">fork the project</a>, commit a new set list or audacity labels, and send me a pull request. Please <em>never</em> add audio files, original or split, to this project. The project is intended to only contain set lists &amp; audacity label files.</p>
@@ -84,10 +98,10 @@
   
   <p>
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" target="_blank" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" align="right" /></a>
-    All text in the <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Concert-Split</span> project, including Set Lists &amp; Audacity Lable files, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/" target="_blank">Creative Commons Attribution-Share Alike 3.0 United States License</a>.<br />
+    All text in the <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Concert-Split</span> Project, including Set Lists &amp; Audacity Lable files, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/" target="_blank">Creative Commons Attribution-Share Alike 3.0 United States License</a>.<br />
   </p>
   
-  <p>Icons on this website by <a href="http://www.fatcow.com/free-icons/index.bml">FatCow Web Hosting</a> / <a href="http://creativecommons.org/licenses/by/3.0/us/" target="_blank">CC BY 3.0</a></span></p>
+  <p>Icons by <a href="http://www.fatcow.com/free-icons/index.bml">FatCow Web Hosting</a> / <a href="http://creativecommons.org/licenses/by/3.0/us/" target="_blank">CC BY 3.0</a></p>
 
   <h2>Contributors</h2>
   <p><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="cc:attributionName">Marcos Wright Kuhns</span></p>
