@@ -1,0 +1,39 @@
+Set List
+========
+
+MP3 Source:  http://www.npr.org/rss/podcast/podcast_detail.php?siteId=15842121
+Track Names: http://www.npr.org/templates/story/story.php?storyId=104655046
+
+#   Track Name                Start At
+==============                ========
+    (intro)                   00:00
+    - The Dirty Projectors
+1.  Useful Chamber
+    Stillness Is the Move
+    - The Dirty Projectors with David Byrne
+    Ambulance Man
+    Knotty Pine
+    - My Brightest Diamond
+5.  Feeling Good
+    - The National
+    Vanderlylle Cry Baby
+    - Dave Sitek
+    With a Girl Like You
+    - David Byrne
+    Don't Fence Me In
+    - David Byrne with Justin Vernon
+    Dreamworld: Marco de Canavezes
+    - Bon Iver
+10. Brackett, WI
+    Blood Bank
+    - Bon Iver with Aaron Dessner and Matt Berninger
+    Big Red Machine
+    - Bon Iver with Aaron Dessner
+    Flume
+    - Sharon Jones
+    Not Gonna Cry
+15. When I Come Home
+    Inspiration Information
+    100 Days, 100 Nights
+    - Ensemble Encore
+18. This Land Is Your Land

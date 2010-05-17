@@ -1,7 +1,8 @@
 Set List
 ========
 
-URL: http://www.npr.org/templates/story/story.php?storyId=14810080
+MP3 Source:  http://public.npr.org/anon.npr-mp3/npr/asclive/2007/10/20071002_asclive_jgonzalez.mp3?dl=1
+Track Names: http://www.npr.org/templates/story/story.php?storyId=14810080
 
 #   Track Name                Start At
 ==============                ========

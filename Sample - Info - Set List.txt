@@ -1,0 +1,18 @@
+Set List
+========
+
+MP3 Source:  http://public.npr.org/anon.npr-mp3/...
+Track Names: http://www.npr.org/templates/story/...
+
+#   Track Name                Start At
+==============                ========
+1.  Track 1                   00:00
+    Track 2                   xx:xx
+    (silence)                 xx:xx
+    Track 3                   xx:xx
+    Track 4                   xx:xx
+    (break)                   xx:xx
+5.  Track 5                   xx:xx
+    Track 6                   xx:xx
+7.  Track 7                   xx:xx
+    (end)                     xx:xx

@@ -1,0 +1,31 @@
+Set List
+========
+
+MP3 Source:  http://public.npr.org/anon.npr-mp3/npr/asc/2009/10/20091015_asc_moby.mp3?dl=1
+Track Names: http://www.npr.org/templates/story/story.php?storyId=113799246
+
+#   Track Name                      Start At
+==============                      ========
+    (ad)                            00:00
+1.  A Seated Night (Pre-recorded)   xx:xx
+    Shot In The Back Of The Head    xx:xx
+    Pale Horses                     xx:xx
+    Extreme Ways                    xx:xx
+5.  Natural Blues                   xx:xx
+    Great Escape                    xx:xx
+    Mistake                         xx:xx
+    Made of Stars                   xx:xx
+    Walk With Me                    xx:xx
+10. Find My Baby                    xx:xx
+    Go                              xx:xx
+    Porcelain                       xx:xx
+    Wait for Me                     xx:xx
+    New Dawn Fades                  xx:xx
+15. Wars                            xx:xx
+    JLTF                            xx:xx
+    Why Does My Heart Feel So Bad?  xx:xx
+    Raining Again                   xx:xx
+    Helpless                        xx:xx
+20. Disco Lies Reggae               xx:xx
+    Lift Me Up                      xx:xx
+22. Honey                           xx:xx
