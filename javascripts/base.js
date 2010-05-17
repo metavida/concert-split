@@ -12,8 +12,8 @@ jQuery(document).ready(function($) {
 	var commit_url = 'http://github.com/api/v2/json/commits/list/metavida/concert-split/master?callback=?',
 	  tree_url = 'http://github.com/api/v2/json/tree/show/metavida/concert-split/',
 	  blob_url = 'http://github.com/api/v2/json/blob/show/metavida/concert-split/',
-	  songs_el = $('#songs'),
-	  loading_el = $('#songs_loading'),
+	  concerts_el = $('#concerts'),
+	  loading_el = $('#concerts_loading'),
 	  html = '',
 	  waiting_on_a = 0;
 	waiting_on = 0;
@@ -30,9 +30,9 @@ jQuery(document).ready(function($) {
 			$.each(show_data.tree, function(concert) {
 				concert = show_data.tree[concert];
 				if(concert.type == 'tree') {
-				  songs_el.append('<h3>'+ concert.name +'</h3><ul></ul>');
-				  songs_el.find('h3').last().append(loading_el);
-				  var ul_el = songs_el.find('ul').last();
+				  concerts_el.append('<h3>'+ concert.name +'</h3><ul></ul>');
+				  concerts_el.find('h3').last().append(loading_el);
+				  var ul_el = concerts_el.find('ul').last();
   				
   				// Loop over directories for a single show, which should be individual concerts.
   				waiting_on++;
@@ -40,9 +40,6 @@ jQuery(document).ready(function($) {
   				  sort_f = function(a, b) { try {
   				    a = a.name.match(/\d+-\d+-\d/)[0];
   				    b = b.name.match(/\d+-\d+-\d/)[0];
-  				    console.log(a);
-    				  console.log(b);
-    				  console.log('----');
   				    if(a > b)
   				      return 1;
   				    else if(a < b)
@@ -51,11 +48,8 @@ jQuery(document).ready(function($) {
     				    return 0;
   				  } catch(err) { return 0; } };
   				  concert_data = concert_data.tree.sort(sort_f);
-  				  console.log(concert_data);
   					$.each(concert_data, function(concert) {
-  					  console.log(concert);
   						concert = concert_data[concert];
-  						console.log(concert);
   						if(concert.type == 'tree') {
   						  
   						  // Get the details for this concert.
@@ -80,7 +74,7 @@ jQuery(document).ready(function($) {
                     html += '</li>';
 					        } else {
 					          html = '<li class="no_labels">'+ concert.name;
-					          html += ' (awaiting set list)';
+					          html += ' (<a href="#contribute">awaiting timestamps</a>)';
 					          html += '</li>';
 					        }
 					        ul_el.append(html);
@@ -101,6 +95,21 @@ jQuery(document).ready(function($) {
 	  if(waiting_on == 0) {
 	    clearInterval(waiting_id);
 	    loading_el.hide();
+	    
+	    $('a[href*=#]').click(hilight_current_anchor);
 	  }
 	}, 100);
+	
+	hilight_current_anchor();
 });
+
+// Hilight the area of HTML that the current URL anchor referrs to
+function hilight_current_anchor() {
+  var klass = 'current';
+  // We need a setTimeout because the URL doesn't update until after the onclick events finish.
+	setTimeout(function() {
+	  var anchor = window.location.href.match(/#(.+)/);
+	  if(anchor) $('a[name='+anchor[1]+']').next('div').addClass(klass);
+	}, 1);
+	setTimeout(function() { $('.'+klass).removeClass(klass); }, 2000);
+}
