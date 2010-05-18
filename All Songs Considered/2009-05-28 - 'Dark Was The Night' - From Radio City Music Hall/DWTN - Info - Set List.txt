@@ -4,36 +4,37 @@ Set List
 MP3 Source:  http://www.npr.org/rss/podcast/podcast_detail.php?siteId=15842121
 Track Names: http://www.npr.org/templates/story/story.php?storyId=104655046
 
-#   Track Name                Start At
-==============                ========
-    (intro)                   00:00
+#   Track Name                            Start At
+==============                            ========
+    (intro)                               00:00
     - The Dirty Projectors
-1.  Useful Chamber
-    Stillness Is the Move
+1.  Useful Chamber                        xx:xx
+    Stillness Is the Move                 xx:xx
     - The Dirty Projectors with David Byrne
-    Ambulance Man
-    Knotty Pine
+    Ambulance Man                         xx:xx
+    Knotty Pine                           xx:xx
     - My Brightest Diamond
-5.  Feeling Good
+5.  Feeling Good                          xx:xx
     - The National
-    Vanderlylle Cry Baby
+    Vanderlylle Cry Baby                  xx:xx
     - Dave Sitek
-    With a Girl Like You
+    With a Girl Like You                  xx:xx
     - David Byrne
-    Don't Fence Me In
+    Don't Fence Me In                     xx:xx
     - David Byrne with Justin Vernon
-    Dreamworld: Marco de Canavezes
+    Dreamworld: Marco de Canavezes        xx:xx
     - Bon Iver
-10. Brackett, WI
-    Blood Bank
+10. Brackett, WI                          xx:xx
+    Blood Bank                            xx:xx
     - Bon Iver with Aaron Dessner and Matt Berninger
-    Big Red Machine
+    Big Red Machine                       xx:xx
     - Bon Iver with Aaron Dessner
-    Flume
+    Flume                                 xx:xx
     - Sharon Jones
-    Not Gonna Cry
-15. When I Come Home
-    Inspiration Information
-    100 Days, 100 Nights
+    Not Gonna Cry                         xx:xx
+15. When I Come Home                      xx:xx
+    Inspiration Information               xx:xx
+    100 Days, 100 Nights                  xx:xx
     - Ensemble Encore
-18. This Land Is Your Land
+18. This Land Is Your Land                xx:xx
+    (end)                                 xx:xx
