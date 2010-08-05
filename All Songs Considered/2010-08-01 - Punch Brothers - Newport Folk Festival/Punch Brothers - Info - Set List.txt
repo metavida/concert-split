@@ -6,16 +6,21 @@ Track Names: http://www.npr.org/templates/story/story.php?storyId=128721757
 
 #   Track Name                      Start At
 ==============                      ========
-    (ad)                            00:00
-1.  Watch at breakdown              xx:xx
-    You are                         xx:xx
-    Rye Whiskey                     xx:xx
-    Reptilia (The strokes cover)    xx:xx
-5.  This is the song                xx:xx
-    Cazadero                        xx:xx
-    Next to the trash               xx:xx
-    Don’t need no                   xx:xx
-    Alex                            xx:xx
-10. Brakeman’s Blues (Bill Monroe)  xx:xx
-    Kid A                           xx:xx
-12. Wayside                         xx:xx
+1.  Watch At Breakdown              00:00
+    You Are                         04:36
+    (talking)                       10:04
+    Rye Whiskey                     11:09
+    Reptilia (The Strokes cover)    14:49
+    (talking)                       18:55
+5.  This is the Song                19:47
+    Cazadero                        24:02
+    (talking)                       27:51
+    Next to the Trash               28:37
+    Don't Need No                   31:59
+    (silence)                       36:44
+    Alex                            36:58
+    (talking)                       41:54
+10. Brakeman's Blues (Bill Monroe)  42:48
+    (talking)                       48:30
+11. Kid A / Wayside                 49:48
+    (end)                           58:10
