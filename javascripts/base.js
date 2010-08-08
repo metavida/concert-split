@@ -7,7 +7,19 @@ if(typeof(window.console) == 'undefined') {
 
 jQuery(document).ready(function($) {
   $('#no_js').hide();
-  $('#has_jas').show();
+  $('#has_js').show();
+  
+  show_tutorial_video = function(event) {
+    event.stopPropagation();
+    var vid_ratio = 0.582, // The video is 1280x745
+      vid_width = $(window).width() - 100,
+      vid_height = $(window).height() - 100;
+    if(vid_width * vid_ratio > vid_height)
+      vid_width = vid_height / vid_ratio;
+    $.colorbox({href:$(this).attr('href'), iframe:true, innerWidth:vid_width, innerHeight:vid_height});
+    return false;
+  };
+  $("#intro_video").click(show_tutorial_video);
   
   var commit_url = 'http://github.com/api/v2/json/commits/list/metavida/concert-split/master?callback=?',
     tree_url = 'http://github.com/api/v2/json/tree/show/metavida/concert-split/',
@@ -42,9 +54,9 @@ jQuery(document).ready(function($) {
               a = a.name.match(/\d+-\d+-\d/)[0];
               b = b.name.match(/\d+-\d+-\d/)[0];
               if(a > b)
-                return 1;
-              else if(a < b)
                 return -1;
+              else if(a < b)
+                return 1;
               else
                 return 0;
             } catch(err) { return 0; } };
