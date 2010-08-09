@@ -5,21 +5,34 @@ if(typeof(window.console) == 'undefined') {
   window.console.log = function(){};
 }
 
+function innerWidthAndHeight(ratio) {
+  var thisWidth = $(window).width() - 100,
+    thisHeight = $(window).height() - 100;
+  if(ratio && thisWidth * ratio > thisHeight)
+    thisWidth = thisHeight / ratio;
+  return {innerWidth:thisWidth, innerHeight:thisHeight};
+}
+
 jQuery(document).ready(function($) {
   $('#no_js').hide();
   $('#has_js').show();
   
   show_tutorial_video = function(event) {
     event.stopPropagation();
-    var vid_ratio = 0.582, // The video is 1280x745
-      vid_width = $(window).width() - 100,
-      vid_height = $(window).height() - 100;
-    if(vid_width * vid_ratio > vid_height)
-      vid_width = vid_height / vid_ratio;
-    $.colorbox({href:$(this).attr('href'), iframe:true, innerWidth:vid_width, innerHeight:vid_height});
+    opts = innerWidthAndHeight(0.582); // The video is 1280x745
+    $.extend(opts, {href:$(this).attr('href'), iframe:true});
+    $.colorbox(opts);
     return false;
   };
   $("#intro_video").click(show_tutorial_video);
+  
+  show_setlist = function(event) {
+    event.stopPropagation();
+    opts = innerWidthAndHeight();
+    $.extend(opts, {href:$(this).attr('href'), iframe:true});
+    $.colorbox(opts);
+    return false;
+  };
   
   var commit_url = 'http://github.com/api/v2/json/commits/list/metavida/concert-split/master?callback=?',
     tree_url = 'http://github.com/api/v2/json/tree/show/metavida/concert-split/',
@@ -88,6 +101,7 @@ jQuery(document).ready(function($) {
                   if(has_labels && set_sha) {
                     li_el.append('<a href="'+ blob_url + has_labels +'">'+ concert.name + '</a>');
                     //li_el.append(' (<a href="'+ blob_url + set_sha +'">view set list</a>)');
+                    $(li_el).find('a').click(show_setlist);
                   } else {
                     li_el.append(concert.name);
                     li_el.append(' (<a href="#contribute">awaiting timestamps</a>)');
