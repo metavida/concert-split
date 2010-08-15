@@ -1,40 +1,56 @@
 Set List
 ========
 
-MP3 Source:  http://www.npr.org/rss/podcast/podcast_detail.php?siteId=15842121
+MP3 Source:  http://podcastdownload.npr.org/anon.npr-podcasts/podcast/510253/104680415/npr_104680415.mp3
 Track Names: http://www.npr.org/templates/story/story.php?storyId=104655046
 
 #   Track Name                            Start At
 ==============                            ========
-    (intro)                               00:00
+    (intro)                               0:00:00
     - The Dirty Projectors
-1.  Useful Chamber                        xx:xx
-    Stillness Is the Move                 xx:xx
+1.  Useful Chamber                          01:45
+    Stillness Is the Move                   09:09
+    (applause)                              13:28
     - The Dirty Projectors with David Byrne
-    Ambulance Man                         xx:xx
-    Knotty Pine                           xx:xx
+    Ambulance Man                           14:04
+    (talking)                               17:17
+    Knotty Pine                             17:36
     - My Brightest Diamond
-5.  Feeling Good                          xx:xx
+5.  Feeling Good                            20:07
     - The National
-    Vanderlylle Cry Baby                  xx:xx
+    Vanderlylle Cry Baby                    24:20
     - Dave Sitek
-    With a Girl Like You                  xx:xx
+    With a Girl Like You                    30:07
     - David Byrne
-    Don't Fence Me In                     xx:xx
+    Don't Fence Me In                       33:37
+    (talking)                               36:59
     - David Byrne with Justin Vernon
-    Dreamworld: Marco de Canavezes        xx:xx
+    Dreamworld: Marco de Canavezes          37:50
+    (talking)                               43:22
     - Bon Iver
-10. Brackett, WI                          xx:xx
-    Blood Bank                            xx:xx
+10. Brackett, WI                            45:11
+    (talking)                               48:52
+    Blood Bank                              49:25
+    (talking)                               54:49
     - Bon Iver with Aaron Dessner and Matt Berninger
-    Big Red Machine                       xx:xx
-    - Bon Iver with Aaron Dessner
-    Flume                                 xx:xx
+    Big Red Machine                         55:35
+    (silence)                               59:49
+    - Bon Iver with My Brightest Diamond    
+    Flume                                 1:00:11
+    (talking)                             1:04:46
+    - Feist with Bon Iver
+    Train Song                            1:05:14
+    - Feist
+15. Someday Baby                          1:08:47
     - Sharon Jones
-    Not Gonna Cry                         xx:xx
-15. When I Come Home                      xx:xx
-    Inspiration Information               xx:xx
-    100 Days, 100 Nights                  xx:xx
+    Not Gonna Cry                         1:13:31
+    (start of a song)                     1:17:57
+    When I Come Home                      1:18:31
+    Inspiration Information               1:23:57
+    100 Days, 100 Nights                  1:28:04
+    (silence)                             1:34:39
+    (talking)                             1:35:26
     - Ensemble Encore
-18. This Land Is Your Land                xx:xx
-    (end)                                 xx:xx
+20. This Land Is Your Land                1:36:47
+    (outro)                               1:43:46
+    (end)                                 1:44:03
