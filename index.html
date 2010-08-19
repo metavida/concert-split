@@ -1,29 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="author" content="Marcos Wright Kuhns" />
-  <meta name="keywords" content="concert, audio, music, split, tracks, audacity, npr" />
-  
-  <title>The Concert-Split Project</title>
-  <link charset="utf-8" href="stylesheets/base.css?4" rel="stylesheet" type="text/css" />
-  <link charset="utf-8" href="stylesheets/colorbox.css?2" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/jquery.colorbox-min.js?1"></script>
-  <script type="text/javascript" src="javascripts/base.js?5"></script>
-</head>
-<body>
-  
-<a href="http://github.com/metavida/concert-split"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-<div id="container">
-  <h1><a href="http://metavida.github.com/concert-split" xmlns:cc="http://creativecommons.org/ns#" rel="cc:attributionURL">The Concert-Split Project</a></h1>
-
-  <p class="description">
-    A collaborative effort to make it simpler to split live, concert audio into individual tracks. Initially focusing on the excellent NPR music collection.
-  </p>
+---
+layout: default
+title: The Concert-Split Project
+---
 
   <p>So, you've found a great, live concert recording on the <a href="http://www.npr.org/templates/rss/podlayer.php?id=510253">Live Concerts from All Songs Considered Podcast</a> &amp; listen to it all the time. The problem is that it's hard, if not impossible, to find any specific song in the hour-long recording. Plus, if it doesn't <a href="http://en.wiktionary.org/wiki/scrobble#Verb">scrobble</a>, it doesn't count.</p>
 
@@ -85,7 +63,19 @@
   
   <a name="concerts"></a>
   <div id="concerts">
-    <img id="concerts_loading" src="images/loading.gif" alt="Loading Data...">
+    <ul>
+    {% for post in site.posts %}
+      <li><a href="{{ post.url }}">
+        {{ post.date | date: "%b %Y" }} -
+        {{ post.title }} -
+        {% if post.venue %}
+        {{ post.venue }}
+        {% else %}
+        In Concert
+        {% endif %}
+      </a></li>
+    {% endfor %}
+    </ul>
   </div>
   
   <a name="tools"></a>

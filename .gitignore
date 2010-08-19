@@ -3,3 +3,6 @@
 
 # Ignore all concert data from the master branch
 All Songs Considered
+
+# Ignore all Jekyll-generated site files
+_site
