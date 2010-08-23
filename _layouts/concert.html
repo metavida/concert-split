@@ -2,5 +2,31 @@
 layout: default
 ---
 <h2>{{ page.title }} - {{ page.date | date_to_string }}</h2>
-  
+
+{% if page.source_url %}
+<a href="{{ page.source_url }}">
+  <img src="/images/music_big.png" alt="Concert Information" align="middle" /><br />
+  <span>Get the Info</span>
+</a>
+{% endif %}
+
+{% if page.source_mp3 %}
+<a href="{{ page.source_mp3 }}">
+  <img src="/images/music_big.png" alt="Download the Concert" align="middle" /><br />
+  <span>Get the Concert</span>
+</a>
+{% endif %}
+
+{% if page.final_labels %}
+<a href="{{ page.final_setlist }}">
+  <img src="/images/music_big.png" alt="Download the Audacity Labels" align="middle" /><br />
+  <span>Get the Labels</span>
+</a>
+{% elsif page.final_setlist %}
+<a href="{{ page.final_setlist }}">
+  <img src="/images/music_big.png" alt="Download the Set List" align="middle" /><br />
+  <span>Get the Set List</span>
+</a>
+{% endif %}
+
 {{ content }}
