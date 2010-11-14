@@ -5,27 +5,39 @@ MP3 Source:  http://public.npr.org/anon.npr-mp3/npr/asc/2010/10/20101005_asc_tmo
 Track Names: http://www.setlist.fm/setlist/the-tallest-man-on-earth/2010/930-club-washington-dc-43d52f13.html
              http://www.npr.org/templates/story/story.php?storyId=130217980
 
-#   Track Name                      Start At
-==============                      ========
-    (ad)                            00:00
-1.  A Field of Birds                00:09
-    Burden of Tomorrow              04:24
-    (talking)                       07:59
-    I Won't Be Found                08:49
-    (silence)                       12:22
-    Pistol Dreams                   12:39
-5.  Love Is All                     xx:xx
-    King of Spain                   xx:xx
-    Thousand Ways                   xx:xx
-    Mother and Child Reunion        xx:xx
-    The Wild Hunt                   xx:xx
-10. Tangle In This Trampled Wheat   xx:xx
-    Like the Wheel                  xx:xx
-    The Gardener                    xx:xx
-    Where Do My Bluebirds Fly       xx:xx
-    You're Going Back               xx:xx
-15. The Sparrow and the Medicine    xx:xx
-    Thrown Right At Me              xx:xx
-    The Dreamer                     xx:xx
-    A Lion's Heart                  xx:xx
-19. This Wind                       xx:xx
+#   Track Name                        Start At
+==============                        ========
+    (ad)                              0:00:00
+1.  A Field of Birds                  0:00:09
+    Burden of Tomorrow                0:04:24
+    (talking)                         0:07:59
+    I Won't Be Found                  0:08:49
+    (silence)                         0:12:22
+    Pistol Dreams                     0:12:39
+    (talking)                         0:17:27
+5.  Love Is All                       0:17:53
+    (talking)                         0:22:33
+    King of Spain                     0:23:33
+    (talking)                         0:27:35
+    Thousand Ways                     0:28:17
+    (talking)                         0:31:51
+    Mother and Child Reunion          0:33:08
+    The Wild Hunt                     0:34:24
+    (talking)                         0:38:22
+10. Tangle In This Trampled Wheat     0:40:06
+    (talking)                         0:43:27
+    Like the Wheel                    0:44:38
+    (talking)                         0:48:20
+    The Gardener                      0:49:26
+    (talking)                         0:53:59
+    Where Do My Bluebirds Fly Tuning  0:54:40
+    Where Do My Bluebirds Fly         0:56:12
+    (talking)                         0:59:52
+    You're Going Back                 1:00:20
+    (silence)                         1:05:12
+15. The Sparrow and the Medicine      1:05:46
+    (talking)                         1:09:25
+    Thrown Right At Me                1:10:01
+    The Dreamer                       1:xx:xx
+    A Lion's Heart                    1:xx:xx
+19. This Wind                         1:xx:xx
