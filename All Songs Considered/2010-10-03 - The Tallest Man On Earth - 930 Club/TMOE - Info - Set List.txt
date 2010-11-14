@@ -9,15 +9,15 @@ Track Names: http://www.setlist.fm/setlist/the-tallest-man-on-earth/2010/930-clu
 ==============                        ========
     (ad)                              0:00:00
 1.  A Field of Birds                  0:00:09
-    Burden of Tomorrow                0:04:24
+    Burden of Tomorrow *              0:04:24.25
     (talking)                         0:07:59
     I Won't Be Found                  0:08:49
     (silence)                         0:12:22
     Pistol Dreams                     0:12:39
     (talking)                         0:17:27
-5.  Love Is All                       0:17:53
+5.  Love Is All *                     0:17:53.60
     (talking)                         0:22:33
-    King of Spain                     0:23:33
+    King of Spain                     0:23:34
     (talking)                         0:27:35
     Thousand Ways                     0:28:17
     (talking)                         0:31:51
@@ -31,13 +31,20 @@ Track Names: http://www.setlist.fm/setlist/the-tallest-man-on-earth/2010/930-clu
     The Gardener                      0:49:26
     (talking)                         0:53:59
     Where Do My Bluebirds Fly Tuning  0:54:40
-    Where Do My Bluebirds Fly         0:56:12
+    Where Do My Bluebirds Fly *       0:56:12.75
     (talking)                         0:59:52
-    You're Going Back                 1:00:20
+15. You're Going Back *               1:00:20.50
     (silence)                         1:05:12
-15. The Sparrow and the Medicine      1:05:46
+    The Sparrow and the Medicine      1:05:46
     (talking)                         1:09:25
-    Thrown Right At Me                1:10:01
-    The Dreamer                       1:xx:xx
-    A Lion's Heart                    1:xx:xx
-19. This Wind                         1:xx:xx
+    Thrown Right At Me                1:09:57
+    (pre-encore)                      1:13:25
+    (talking)                         1:15:05
+    The Dreamer                       1:16:00
+    (silence)                         1:20:00
+    A Lion's Heart                    1:20:42
+    (silence)                         1:24:40
+20. This Wind                         1:25:55
+    (end)                             1:30:58
+
+* Needs an adjustment of less than 1 second
