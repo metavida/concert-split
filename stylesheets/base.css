@@ -32,6 +32,11 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 #description_icons .lil_4 { opacity: .4; }
 #description_icons .lil_5 { opacity: .1; }
 
+#concert { margin-bottom: 1em; }
+#concert a.big_icon { display: block; float: left; width: 33%; text-decoration: none; text-align: center; }
+#concert .big_icon img { width: 100%; }
+#concert .big_icon span { text-decoration: underline; }
+
 /* clearfix via http://perishablepress.com/press/2009/12/06/new-clearfix-hack/ */
 * html .clearfix { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; }  /* IE7 */
