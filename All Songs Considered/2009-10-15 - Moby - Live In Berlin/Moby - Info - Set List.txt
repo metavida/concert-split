@@ -6,26 +6,34 @@ Track Names: http://www.npr.org/templates/story/story.php?storyId=113799246
 
 #   Track Name                      Start At
 ==============                      ========
-    (ad)                            00:00
-1.  A Seated Night (Pre-recorded)   xx:xx
-    Shot In The Back Of The Head    xx:xx
-    Pale Horses                     xx:xx
-    Extreme Ways                    xx:xx
-5.  Natural Blues                   xx:xx
-    Great Escape                    xx:xx
-    Mistake                         xx:xx
-    Made of Stars                   xx:xx
-    Walk With Me                    xx:xx
-10. Find My Baby                    xx:xx
-    Go                              xx:xx
-    Porcelain                       xx:xx
-    Wait for Me                     xx:xx
-    New Dawn Fades                  xx:xx
-15. Wars                            xx:xx
-    JLTF                            xx:xx
-    Why Does My Heart Feel So Bad?  xx:xx
-    Raining Again                   xx:xx
-    Helpless                        xx:xx
-20. Disco Lies Reggae               xx:xx
-    Lift Me Up                      xx:xx
-22. Honey                           xx:xx
+    (ad)                            0:00:00
+1.  A Seated Night (Pre-recorded)   0:00:12
+    Shot In The Back Of The Head    0:03:42
+    Pale Horses                     0:07:24
+    (talking)                       0:11:17
+    Extreme Ways                    0:11:32
+5.  Natural Blues                   0:15:35
+    (talking)                       0:19:45
+    Great Escape                    0:19:57
+    Mistake                         0:22:19
+    (talking)                       0:??:??
+    Made of Stars                   0:26:28
+    (talking)                       0:30:58
+    Walk With Me                    0:31:17
+    (talking)                       0:38:33
+10. Find My Baby                    0:40:24
+    Go                              0:44:47
+    Porcelain                       0:49:21
+    (talking)                       0:53:26
+    Wait for Me                     0:54:22
+    New Dawn Fades                  0:59:10
+15. Wars                            1:03:55
+    JLTF                            1:08:26
+    (talking)                       1:11:31
+    Why Does My Heart Feel So Bad?  1:13:00
+    (talking)                       1:18:18
+    Raining Again                   1:19:53
+    Helpless                        1:xx:xx
+20. Disco Lies Reggae               1:xx:xx
+    Lift Me Up                      1:xx:xx
+22. Honey                           1:xx:xx
