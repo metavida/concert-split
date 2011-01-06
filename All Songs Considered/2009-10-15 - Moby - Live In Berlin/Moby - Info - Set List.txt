@@ -10,30 +10,32 @@ Track Names: http://www.npr.org/templates/story/story.php?storyId=113799246
 1.  A Seated Night (Pre-recorded)   0:00:12
     Shot In The Back Of The Head    0:03:42
     Pale Horses                     0:07:24
-    (talking)                       0:11:17
+    (introduction)                  0:11:17
     Extreme Ways                    0:11:32
-5.  Natural Blues                   0:15:35
+    (introduction)                  0:15:36
+5.  Natural Blues                   0:15:43
     (talking)                       0:19:45
-    Great Escape                    0:19:57
+    Great Escape                    0:19:59
     Mistake                         0:22:19
-    (talking)                       0:??:??
-    Made of Stars                   0:26:28
-    (talking)                       0:30:58
+    (talking)                       0:26:19
+    Made of Stars                   0:26:39
+    (introduction)                  0:30:58
     Walk With Me                    0:31:17
+10. Find My Baby                    0:34:12
     (talking)                       0:38:33
-10. Find My Baby                    0:40:24
-    Go                              0:44:47
-    Porcelain                       0:49:21
-    (talking)                       0:53:26
-    Wait for Me                     0:54:22
-    New Dawn Fades                  0:59:10
-15. Wars                            1:03:55
-    JLTF                            1:08:26
+    Go                              0:40:24
+    Porcelain                       0:44:49
+    (talking)                       0:49:21
+    Wait for Me                     0:53:26
+    New Dawn Fades                  0:54:22
+15. Wars                            0:59:11.5
+    JLTF                            1:03:55
+    Why Does My Heart Feel So Bad?  1:08:26
     (talking)                       1:11:31
-    Why Does My Heart Feel So Bad?  1:13:00
+    Raining Again                   1:13:00
     (talking)                       1:18:18
-    Raining Again                   1:19:53
-    Helpless                        1:xx:xx
+    Helpless                        1:19:53
 20. Disco Lies Reggae               1:xx:xx
     Lift Me Up                      1:xx:xx
 22. Honey                           1:xx:xx
+                                    1:xx:xx
