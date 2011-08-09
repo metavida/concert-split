@@ -6,9 +6,9 @@ Track Names: http://www.npr.org/2011/07/05/137526050/the-blind-boys-of-alabama-t
 
 #   Track Name                          Start At
 ==============                          ========
-1.  	Intro                            
-2. 	Take The High Road
-3.	I Know A Place
-4.	Jesus Built A Bridge To Heaven
-5.	Amazing Grace
+2.  Take The High Road                  00:00
+3.  I Know A Place                      03:35
+4.  Jesus Built A Bridge To Heaven      08:07
+5.  Amazing Grace                       11:28
+    (end)                               16:04
     

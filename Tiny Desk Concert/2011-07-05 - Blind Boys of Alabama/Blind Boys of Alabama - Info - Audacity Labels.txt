@@ -1,5 +1,1 @@
-0.0	27.0	Ad
-27.0	238.0	Take The High Road
-238.0	510.0	I Know A Place
-510.0 	714.0	Jesus Built A Bridge To Heaven
-714.0	990.0	Amazing Grace
+0.000000	215.507851	Take The High Road215.507851	487.000000	I Know A Place487.000000	688.000000	Jesus Built A Bridge To Heaven688.000000	964.571429	Amazing Grace
