@@ -1,0 +1,38 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/concerts/2011/07/20110730_concerts_decemberists.mp3?dl=1
+Track Names: http://www.npr.org/templates/story/story.php?storyId=137182356
+
+#   Track Name                    Start At
+==============                    ========
+    (ad)                          00:00
+    (intro)                       00:11
+1.  July, July!                   01:01
+    (talking)                     05:08
+2.  Calamity Song                 05:29
+    (talking)                     09:20
+3.  Down By The Water             10:12
+    (talking)                     14:17
+4.  Rise To Me                    15:06
+    (talking)                     19:50
+5.  The Soldiering Life           20:33
+    (talking)                     24:20
+6.  We Both Go Down Together      25:08
+    (talking)                     29:06
+7.  Won't Want For Love           30:40
+    (talking)                     37:15
+8.  The Rake's Song               37:51
+    (talking)                     41:32
+9.  Rox In The Box                43:26
+    (talking)                     46:37
+10. O Valencia                    46:59
+    (talking)                     51:18
+11. This Is Why We Fight          52:16
+    (talking)                     56:59
+12. Mariner's Revenge             59:39
+    (talking)                     10:52
+13. All Arise!                    11:19
+    (talking)                     15:24
+14. June Hymn                     16:02
+    (end)                         20:38
