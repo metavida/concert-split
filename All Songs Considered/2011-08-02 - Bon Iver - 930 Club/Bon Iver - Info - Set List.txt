@@ -1,35 +1,38 @@
-Bon Iver Times
+Set List
+========
 
-Intro 0:00
-Perth 0:18
-Minnesota, WI 4:55
-Talking 8:43
-Towers 9:18
-Silence 12:27
-Holocene 13:02
-Talking 18:52
-Creature Fear 19:16
-Silence 25:28
-Flume 25:32
-Silence 29:53
-Hinnom, TX 30:51
-Wash ??
-Talking 39:01
-Brackett, WI 39:50
-Blood Bank 43:20
-Who Is It (Bjork cover) 49:48
-Re: Stacks ??
-Talking 55:52
-Calgary 56:14
-Instructions 00:30
-Wolves (Act I and II) 02:14
-Break 8:10
-ENCORE:
-Skinny Love 8:31
-Talking 13:06
-Beth/Rest 13:26
-Talking 19:55
-For Emma 20:44
-End
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/asc/2011/08/20110802_asc_boniverlive.mp3?dl=1
+Track Names: http://www.npr.org/2011/08/04/138890247/live-tuesday-bon-iver-in-concert
 
-Sent from my iPad
+#   Track Name                  Start At
+==============                  ========
+    (intro)                     0:00:00
+1.  Perth                       0:00:18
+2.  Minnesota, WI               0:04:55
+    (talking)                   0:08:43
+3.  Towers                      0:09:18
+4.  Silence                     0:12:27
+5.  Holocene                    0:13:02
+    (talking)                   0:18:52
+6.  Creature Fear               0:19:16
+7.  Silence                     0:25:28
+8.  Flume                       0:25:32
+9.  Silence                     0:29:53
+10. Hinnom, TX                  0:30:51
+11. Wash                        0:??:??
+    (talking)                   0:39:01
+12. Brackett, WI                0:39:50
+13. Blood Bank                  0:43:20
+14. Who Is It (Bjork cover)     0:49:48
+15. Re: Stacks                  0:??:??
+    (talking)                   0:55:52
+16. Calgary                     0:56:14
+18. (Wolves instructions)       1:00:30
+19. Wolves (Act I and II)       1:02:14
+    (break)                     1:08:10
+20. Skinny Love                 1:08:31
+    (talking)                   1:13:06
+21. Beth/Rest                   1:13:26
+    (talking)                   1:19:55
+22. For Emma                    1:20:44
+    (end)                       1??:??
