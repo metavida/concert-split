@@ -1,5 +1,1 @@
-0.0	29.0	Intro
-29.0	267.0	Down By The Water
-267.0	302.0	Studio Banter
-302.0	496.0	Rox In The Box
-496.0	834.0	June Hymn
+0.000000	242.000000	Down By The Water242.000000	278.000000	Studio Banter278.000000	473.000000	Rox In The Box473.000000	487.000000	June Himn Intro487.000000	808.672653	June Hymn

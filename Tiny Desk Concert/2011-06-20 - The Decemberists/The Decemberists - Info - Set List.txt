@@ -4,10 +4,11 @@ Set List
 MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/asc/2011/06/20110619_asc_decemberists.mp3?dl=1
 Track Names: http://www.npr.org/2011/06/23/137247476/the-decemberists-tiny-desk-concert
 
-#   Track Name                          Start At
-==============                          ========
-1.  	Intro                            
-2. 	Down By The Water
-3.	Rox In The Box
-4.	June Hymn
-    
+#   Track Name              Start At
+==============              ========
+1.  Down By The Water       00:00
+    (talking)               04:02
+2.  Rox In The Box          04:38
+    (talking)               07:53
+4.  June Hymn               08:07
+    (end)                   13:28
