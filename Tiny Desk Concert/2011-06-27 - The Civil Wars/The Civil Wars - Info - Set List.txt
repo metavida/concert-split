@@ -4,10 +4,12 @@ Set List
 MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/asc/2011/06/20110626_asc_civilwars.mp3?dl=1
 Track Names: http://www.npr.org/2011/06/27/137392548/the-civil-wars-tiny-desk-concert
 
-#   Track Name                          Start At
-==============                          ========
-1.  	Intro                            
-2. 	Barton Hollow
-3.	Twenty Years
-4.	Poison & Wine
-    
+#   Track Name                Start At
+==============                ========
+1.  (intro)                   00:00
+2.  Barton Hollow             00:22
+    (talking)                 03:54
+3.  Twenty Years              04:23
+    (talking)                 07:31
+4.  Poison & Wine             07:49
+    (end)                     11:38

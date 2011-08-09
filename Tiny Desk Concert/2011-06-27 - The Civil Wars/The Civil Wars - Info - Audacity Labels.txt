@@ -1,6 +1,1 @@
-0.0	27.0	Intro
-27.0	242.0   Barton Hollow
-242.0	272.0  	Studio Banter 
-272.0	459.0	Twenty Years
-459.0	478.0	Poison & Wine intro
-478.0	707.0	Poison & Wine
+0.000000	22.000000	Intro22.000000	234.000000	Barton Hollow234.000000	263.000000	Studio Banter263.000000	451.000000	Twenty Years451.000000	469.000000	Poison & Wine intro469.000000	698.383673	Poison & Wine
