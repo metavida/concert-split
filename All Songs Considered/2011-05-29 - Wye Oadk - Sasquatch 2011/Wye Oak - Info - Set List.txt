@@ -1,0 +1,18 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/concerts/2011/05/20110528_concerts_wyeoak.mp3?dl=1
+Track Names: http://www.npr.org/templates/story/story.php?storyId=136581951
+
+#   Track Name              Start At
+==============              ========
+1.  The Alter               x:xx:xx
+    Holy Holy               x:xx:xx
+    Plains                  x:xx:xx
+    Hot As Day              x:xx:xx
+5.  Dogs Eyes               x:xx:xx
+    Civilian                x:xx:xx
+    That I Do               x:xx:xx
+    I Hope You Die          x:xx:xx
+    For Prayer              x:xx:xx
+    (end)                   x:xx:xx
