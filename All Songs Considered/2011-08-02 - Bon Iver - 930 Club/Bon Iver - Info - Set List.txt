@@ -8,31 +8,29 @@ Track Names: http://www.npr.org/2011/08/04/138890247/live-tuesday-bon-iver-in-co
 ==============                  ========
     (intro)                     0:00:00
 1.  Perth                       0:00:18
-2.  Minnesota, WI               0:04:55
-    (talking)                   0:08:43
-3.  Towers                      0:09:18
-4.  Silence                     0:12:27
-5.  Holocene                    0:13:02
-    (talking)                   0:18:52
-6.  Creature Fear               0:19:16
-7.  Silence                     0:25:28
-8.  Flume                       0:25:32
-9.  Silence                     0:29:53
-10. Hinnom, TX                  0:30:51
-11. Wash                        0:??:??
+2.  Minnesota, WI               0:04:56
+    (talking)                   0:08:42
+3.  Towers                      0:09:19
+    (silence)                   0:12:27
+4.  Holocene                    0:13:03
+    (talking)                   0:18:53
+5.  Creature Fear               0:19:17
+6.  Flume                       0:25:32
+    (silence)                   0:29:54
+7.  Hinnom, TX                  0:30:46
+8.  Wash                        0:34:03
     (talking)                   0:39:01
-12. Brackett, WI                0:39:50
-13. Blood Bank                  0:43:20
-14. Who Is It (Bjork cover)     0:49:48
-15. Re: Stacks                  0:??:??
+9.  Brackett, WI                0:39:50
+10. Blood Bank                  0:43:20
+11. Re: Stacks                  0:49:48
     (talking)                   0:55:52
-16. Calgary                     0:56:14
-18. (Wolves instructions)       1:00:30
-19. Wolves (Act I and II)       1:02:14
+12. Calgary                     0:56:26
+    (Wolves instructions)       1:00:30
+13. Wolves (Act I and II)       1:02:14
     (break)                     1:08:10
-20. Skinny Love                 1:08:31
-    (talking)                   1:13:06
-21. Beth/Rest                   1:13:26
+14. Skinny Love                 1:08:33
+    (talking)                   1:13:07
+15. Beth/Rest                   1:13:26
     (talking)                   1:19:55
-22. For Emma                    1:20:44
-    (end)                       1??:??
+16. For Emma                    1:20:22
+    (end)                       1:24:49
