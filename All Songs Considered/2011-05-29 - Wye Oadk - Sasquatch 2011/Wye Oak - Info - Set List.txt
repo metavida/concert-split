@@ -6,13 +6,51 @@ Track Names: http://www.npr.org/templates/story/story.php?storyId=136581951
 
 #   Track Name              Start At
 ==============              ========
-1.  The Alter               x:xx:xx
-    Holy Holy               x:xx:xx
-    Plains                  x:xx:xx
-    Hot As Day              x:xx:xx
-5.  Dogs Eyes               x:xx:xx
+    (intro)                 0:00:00
+1.  The Alter               0:00:13
+    (talking)               0:04:38
+    Holy Holy               0:04:54
+    (talking)               0:09:13
+    Plains                  0:09:40
+    (talking)               0:14:02
+    Hot As Day              0:14:18
+    (talking)               0:18:17
+    My Neighbor             0:19:18
+    (talking)               0:23:17
+    My Creator              0:23:48
+    (talking)               0:27:35
+5.  Dogs Eyes               
+    (talking)               x:xx:xx
     Civilian                x:xx:xx
+    (talking)               x:xx:xx
     That I Do               x:xx:xx
+    (talking)               x:xx:xx
     I Hope You Die          x:xx:xx
+    (talking)               x:xx:xx
     For Prayer              x:xx:xx
     (end)                   x:xx:xx
+
+
+Start: 2011-10-09 16:01:41.85
+Split 20  -  0:41:06.74
+Split 19  -  0:35:36.12
+Split 18  -  0:34:56.63
+Split 17  -  0:31:16.40
+Split 16  -  0:30:54.98
+Split 15  -  0:28:29.55
+
+Split 14  -  0:27:35.45
+Split 13  -  0:23:48.58
+Split 12  -  0:23:17.38
+Split 11  -  0:19:18.05
+#Split 10  -  0:18:55.77
+Split 09  -  0:18:17.54
+Split 08  -  0:14:20.72
+Split 07  -  0:13:56.97
+Split 06  -  0:13:36.62
+Split 05  -  0:09:40.35
+Split 04  -  0:09:13.50
+Split 03  -  0:04:54.24 
+Split 02  -  0:04:38.07
+Split 01  -  0:00:12.80
+Stop: 2011-10-09 16:42:51.32
