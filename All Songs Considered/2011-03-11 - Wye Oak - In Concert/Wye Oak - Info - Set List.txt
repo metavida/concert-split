@@ -8,22 +8,21 @@ Track Names: http://www.npr.org/templates/story/story.php?storyId=134397488
 ==============              ========
     (intro)                 0:00:00
 1.  The Alter               0:00:13
-    (talking)               0:04:38
-    Holy Holy               0:04:54
-    (talking)               0:09:13
-    Plains                  0:09:40
+    Holy Holy               0:04:52
+    (talking)               0:09:14
+    Plains                  0:09:43
     (talking)               0:14:02
-    Hot As Day              0:14:18
-    (talking)               0:18:17
+    Hot As Day              0:14:19
+    (talking)               0:18:20
 5.  My Neighbor             0:19:18
-    (talking)               0:23:17
+    (talking)               0:23:18
     My Creator              0:23:48
-    (talking)               0:27:35
+    (talking)               0:27:31
     Dogs' Eyes              0:28:29
-    (talking)               0:30:54
-    Civilian                0:31:16
-    (talking)               0:34:56
-    Take it In              0:35:36
+    (talking)               0:30:52
+    Civilian                0:31:07
+    (talking)               0:34:59
+    Take It In              0:35:40
     (talking)               0:41:09
 10. That I Do               0:41:22
     (talking)               0:45:25
@@ -32,5 +31,7 @@ Track Names: http://www.npr.org/templates/story/story.php?storyId=134397488
     I Hope You Die          0:51:50
     (break)                 0:56:58
     (talking)               0:57:46
-    For Prayer              0:58:40
-    (talking)               0:
+    Fish                    0:58:40
+    (talking)               1:03:08
+14. For Prayer              1:03:46
+    (end)                   1:07:42
