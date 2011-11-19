@@ -1,0 +1,23 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/concerts/2011/08/20110801_concerts_civilwars.mp3?dl=1
+Track Names: http://www.npr.org/2011/08/08/137184059/newport-folk-2011-the-civil-wars-live-in-concert
+
+#   Track Name                    Start At
+==============                    ========
+    (intro)                       00:00
+1.  Tip Of My Tongue              ??:??
+    Forget Me Not                 ??:??
+    From This Valley 20 Years     ??:??
+    I've Got This Friend          ??:??
+5.  Barton Hollow                 ??:??
+    Falling                       ??:??
+    I Want You Back               ??:??
+    Birds Of A Feather            ??:??
+    Disarm                        ??:??
+10. My Father's Father            ??:??
+    Poison And Wine               ??:??
+    Billie Jean                   ??:??
+13. Dance Me To The End Of Love   ??:??
+    (end)                         57:14
