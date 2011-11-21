@@ -7,10 +7,10 @@ Track Names: http://www.npr.org/2011/08/08/137184059/newport-folk-2011-the-civil
 #   Track Name                    Start At
 ==============                    ========
     (intro)                       00:00
-1.  Tip Of My Tongue              00:26
+1.  Tip Of My Tongue              00:30
     Forget Me Not                 03:23
     From This Valley              06:43
-    20 Years                      10:18
+    20 Years                      10:20
     (talking)                     13:30
 5.  I've Got This Friend          13:51
     Girl With The Red Balloon     18:13
@@ -24,9 +24,9 @@ Track Names: http://www.npr.org/2011/08/08/137184059/newport-folk-2011-the-civil
     (talking)                     40:12
     Billie Jean                   40:28
     (talking)                     44:56
-    My Father's Father            45:27
+    My Father's Father            45:28
     (talking)                     48:50
     Poison And Wine               49:43
-    (break)                       53:30
-14. Dance Me To The End Of Love   54:00
+    (talking)                     53:30
+14. Dance Me To The End Of Love   54:01
     (end)                         57:11
