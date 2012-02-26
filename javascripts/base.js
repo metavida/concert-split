@@ -26,6 +26,12 @@ jQuery(document).ready(function($) {
   };
   $("#intro_video").click(show_tutorial_video);
   
+  show_download_prompt = function(event) {
+    event.stopPropagation();
+    $.colorbox({innerWidth:400, innerHeight:150, inline:true, href:'#download_prompt'});
+    return false;
+  }
+  
   show_setlist = function(event) {
     event.stopPropagation();
     opts = innerWidthAndHeight();
@@ -101,7 +107,7 @@ jQuery(document).ready(function($) {
                   if(has_labels && set_sha) {
                     li_el.append('<a href="'+ blob_url + has_labels +'">'+ concert.name + '</a>');
                     //li_el.append(' (<a href="'+ blob_url + set_sha +'">view set list</a>)');
-                    $(li_el).find('a').click(show_setlist);
+                    $(li_el).find('a').click(show_download_prompt);
                   } else {
                     li_el.append(concert.name);
                     li_el.append(' (<a href="#contribute">awaiting timestamps</a>)');
