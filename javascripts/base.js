@@ -5,13 +5,36 @@ if(typeof(window.console) == 'undefined') {
   window.console.log = function(){};
 }
 
-function innerWidthAndHeight(ratio) {
-  var thisWidth = $(window).width() - 100,
-    thisHeight = $(window).height() - 100;
-  if(ratio && thisWidth * ratio > thisHeight)
-    thisWidth = thisHeight / ratio;
-  return {innerWidth:thisWidth, innerHeight:thisHeight};
-}
+CSP = {
+  // Return a Hash containing width & height values for $.colorbox based on
+  // the current dimensions of the browser viewport.
+  innerWidthAndHeight: function(ratio) {
+    var thisWidth = $(window).width() - 100,
+      thisHeight = $(window).height() - 100;
+    if(ratio && thisWidth * ratio > thisHeight)
+      thisWidth = thisHeight / ratio;
+    return {innerWidth:thisWidth, innerHeight:thisHeight};
+  },
+  
+  getJSON: function(url, callback) {
+    waiting_on++;
+    $.getJSON(url, function(data) {
+      try { callback(data); } catch(err) {}
+      waiting_on--;
+    });
+  },
+  
+  // Hilight the area of HTML that the current URL anchor referrs to
+  hilightCurrentAnchor: function() {
+    var klass = 'current';
+    // We need a setTimeout because the URL doesn't update until after the onclick events finish.
+    setTimeout(function() {
+      var anchor = window.location.href.match(/#(.+)/);
+      if(anchor) $('a[name='+anchor[1]+']').next('div').addClass(klass);
+    }, 1);
+    setTimeout(function() { $('.'+klass).removeClass(klass); }, 2000);
+  }
+};
 
 jQuery(document).ready(function($) {
   $('#no_js').hide();
@@ -19,7 +42,7 @@ jQuery(document).ready(function($) {
   
   show_tutorial_video = function(event) {
     event.stopPropagation();
-    opts = innerWidthAndHeight(0.582); // The video is 1280x745
+    opts = CSP.innerWidthAndHeight(0.582); // The video is 1280x745
     $.extend(opts, {href:$(this).attr('href'), iframe:true});
     $.colorbox(opts);
     return false;
@@ -30,11 +53,11 @@ jQuery(document).ready(function($) {
     event.stopPropagation();
     $.colorbox({innerWidth:400, innerHeight:150, inline:true, href:'#download_prompt'});
     return false;
-  }
+  };
   
   show_setlist = function(event) {
     event.stopPropagation();
-    opts = innerWidthAndHeight();
+    opts = CSP.innerWidthAndHeight();
     $.extend(opts, {href:$(this).attr('href'), iframe:true});
     $.colorbox(opts);
     return false;
@@ -50,13 +73,11 @@ jQuery(document).ready(function($) {
   waiting_on = 0;
   
   // Get the most recent commit so we know the SHA of the root tree
-  waiting_on++;
-  $.getJSON(commit_url, function(data) {
+  CSP.getJSON(commit_url, function(data) {
     //console.log(data);
     
     // Loop over the list of root directories, which should NPR shows.
-    waiting_on++;
-    $.getJSON(tree_url + (data.commits[0].tree) +'?callback=?', function(show_data) {
+    CSP.getJSON(tree_url + (data.commits[0].tree) +'?callback=?', function(show_data) {
       //console.log(show_data);
       data_tree = show_data.tree;
       $.each(show_data.tree, function(show) {
@@ -67,8 +88,7 @@ jQuery(document).ready(function($) {
           var ul_el = concerts_el.find('ul').last();
           
           // Loop over directories for a single show, which should be individual concerts.
-          waiting_on++;
-          $.getJSON(tree_url + show.sha +"?callback=?", function(concert_data) {
+          CSP.getJSON(tree_url + show.sha +"?callback=?", function(concert_data) {
             sort_f = function(a, b) { try {
               a = a.name.match(/\d+-\d+-\d/)[0];
               b = b.name.match(/\d+-\d+-\d/)[0];
@@ -87,8 +107,7 @@ jQuery(document).ready(function($) {
                 ul_el.append('<li id="concert_'+concert.sha+'"></li>');
                 
                 // Get the details for this concert.
-                waiting_on++;
-                $.getJSON(tree_url + concert.sha +"?callback=?", function(file_data) {
+                CSP.getJSON(tree_url + concert.sha +"?callback=?", function(file_data) {
                   //console.log(file_data);
                   //console.log(concert);
                   var has_labels = false,
@@ -112,17 +131,13 @@ jQuery(document).ready(function($) {
                     li_el.append(concert.name);
                     li_el.append(' (<a href="#contribute">awaiting timestamps</a>)');
                   }
-                waiting_on--;
                 });
               }
             });
-          waiting_on--;
           });
         }
       });
-    waiting_on--;
     });
-  waiting_on--;
   });
   
   var waiting_id = setInterval(function() {
@@ -130,20 +145,9 @@ jQuery(document).ready(function($) {
       clearInterval(waiting_id);
       loading_el.hide();
       
-      $('a[href*=#]').click(hilight_current_anchor);
+      $('a[href*=#]').click(CSP.hilightCurrentAnchor);
     }
   }, 100);
   
-  hilight_current_anchor();
+  CSP.hilightCurrentAnchor();
 });
-
-// Hilight the area of HTML that the current URL anchor referrs to
-function hilight_current_anchor() {
-  var klass = 'current';
-  // We need a setTimeout because the URL doesn't update until after the onclick events finish.
-  setTimeout(function() {
-    var anchor = window.location.href.match(/#(.+)/);
-    if(anchor) $('a[name='+anchor[1]+']').next('div').addClass(klass);
-  }, 1);
-  setTimeout(function() { $('.'+klass).removeClass(klass); }, 2000);
-}
