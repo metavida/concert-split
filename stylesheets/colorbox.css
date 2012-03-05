@@ -23,7 +23,7 @@
 #colorbox, #cboxWrapper{overflow:visible;}
   #cboxContent{margin-top:20px;}
     #cboxLoadedContent{background:#fff; border:5px solid #ccc; padding:20px;}
-    #cboxLoadingGraphic{background:url(images/loading.gif) center center no-repeat;}
+    #cboxLoadingGraphic{background:url(../images/loading.gif) center center no-repeat;}
     #cboxLoadingOverlay{background:#fff;}
     #cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
     #cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
