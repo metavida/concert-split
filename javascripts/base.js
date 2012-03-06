@@ -18,10 +18,21 @@ CSP = {
   
   getJSON: function(url, callback) {
     waiting_on++;
-    $.getJSON(url, function(data) {
-      try { callback(data.data); } catch(err) {}
-      waiting_on--;
-    });
+    var cached_data = $.jStorage.get(url),
+        with_data = function(data) {
+          try { callback(data); } catch(err) {}
+          waiting_on--;
+        };
+    if(cached_data) {
+      with_data(cached_data);
+    } else {
+      $.getJSON(url, function(data) {
+        data = data.data;
+        if(data.url)
+          $.jStorage.set(data.url + '?callback=?', data);
+        with_data(data);
+      });
+    }
   },
   
   // Hilight the area of HTML that the current URL anchor referrs to
