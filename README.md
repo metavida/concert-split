@@ -6,6 +6,6 @@ The goal of this website is to provide a nice, easy to maintain, public face to 
 
 Ok, so jekyll is actually pretty drop-dead simple to use, but given enough time I inevitably forget how to do local development, so here's the trick
 
-    git install jekyll
-    jekyll --server
+    gem install jekyll
+    jekyll --auto --server
     open http://127.0.0.1:4000 # if you're on OS X

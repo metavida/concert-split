@@ -1,1 +1,1 @@
-rvm use default@concert-split
+rvm --create use default@concert-split
