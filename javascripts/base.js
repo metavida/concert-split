@@ -5,7 +5,14 @@ if(typeof(window.console) == 'undefined') {
   window.console.log = function(){};
 }
 
+(function() {
+  // The root of the concert-split project on GitHub.
+  var root_url = 'https://api.github.com/repos/metavida/concert-split/',
+      commits_url = root_url + 'commits?sha=master';
+      
 CSP = {
+  tree_url: root_url + 'git/trees/master',
+  
   // Return a Hash containing width & height values for $.colorbox based on
   // the current dimensions of the browser viewport.
   innerWidthAndHeight: function(ratio) {
@@ -14,6 +21,39 @@ CSP = {
     if(ratio && thisWidth * ratio > thisHeight)
       thisWidth = thisHeight / ratio;
     return {innerWidth:thisWidth, innerHeight:thisHeight};
+  },
+  
+  // Expire the local cache if all of the following conditions are met.
+  // 1) The cache was populated a while back.
+  // 2) The tree_root's git hash has changed.
+  expireCache: function() {
+    console.log('start expireCache');
+    var last_update = $.jStorage.get('last_update'),
+      last_sha = $.jStorage.get('last_sha'),
+      last_week = (new Date).getTime() - 604800000;
+    
+    // Don't expire the cache if the last update was within a week.
+    if(last_update && last_update > last_week)
+      return false;
+    
+    $.getJSON(commits_url, function(data) {
+      console.log('start lasts commit sha check');
+      var current_sha = data[0].sha;
+      
+      if(last_sha == current_sha) {
+        // If there haven't been any commits since last we checked
+        // don't do anything. It's safe to update the last_update
+        // value because we did confirm no new changes as of today.
+      } else {
+        // If there was a new commit, flush the cache & record the
+        // sha of this latest commit.
+        $.jStorage.flush();
+        $.jStorage.set('last_sha', current_sha);
+      }
+      // The last time we made confirmed that the cache was freesh
+      // was right now.
+      $.jStorage.set('last_update', (new Date).getTime());
+    });
   },
   
   getJSON: function(url, callback) {
@@ -46,8 +86,12 @@ CSP = {
     setTimeout(function() { $('.'+klass).removeClass(klass); }, 2000);
   }
 };
+})();
+
+CSP.expireCache();
 
 jQuery(document).ready(function($) {
+  console.log('document ready');
   $('#no_js').hide();
   $('#has_js').show();
   
@@ -74,15 +118,15 @@ jQuery(document).ready(function($) {
     return false;
   };
   
-  var tree_url = 'https://api.github.com/repos/metavida/concert-split/git/trees/master',
-    blob_url = 'https://github.com/api/v2/json/blob/show/metavida/concert-split/',
+  var blob_url = 'https://github.com/api/v2/json/blob/show/metavida/concert-split/',
     concerts_el = $('#concerts'),
     loading_el = $('#concerts_loading'),
     html = '',
     waiting_on_a = 0;
   waiting_on = 0;
   
-  CSP.getJSON(tree_url + '?callback=?', function(show_data) {
+  CSP.getJSON(CSP.tree_url + '?callback=?', function(show_data) {
+    console.log('start tree render');
     //console.log(show_data);
     data_tree = show_data.tree;
     $.each(show_data.tree, function(show) {
