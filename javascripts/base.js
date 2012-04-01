@@ -68,29 +68,24 @@ CSP = {
   // 1) The cache was populated a while back.
   // 2) The tree_root's git hash has changed.
   expireCache: function() {
-    console.log('start expireCache');
     var last_update = $.jStorage.get('last_update'),
       last_sha = $.jStorage.get('last_sha'),
       last_week = (new Date).getTime() - 604800000;
     
     if(last_update && last_update > last_week) {
-      console.log('cache is recent');
       // If the last update was within a week then the cache is fresh.
       $(document).trigger('cache_is_fresh');
       
     } else {
-      console.log('cache is a bit old');
       // If the last update to the cache is from a while back, check
       // GitHub to see if there have been any recent commits.
       
       CSP.waitingOn++;
       $.getJSON(commits_url, function(data) {
         CSP.waitingOn--;
-        console.log([current_sha, data]);
         var current_sha = data[0].sha;
 
         if(last_sha == current_sha) {
-          console.log('no commits since last cache');
           // If there haven't been any commits since last we checked
           // don't do anything. It's safe to update the last_update
           // value because we did confirm no new changes as of today.
@@ -116,8 +111,6 @@ CSP = {
       html = '';
     
     CSP.getJSON(tree_url + '?callback=?', function(show_data) {
-      console.log('start tree render');
-      //console.log(show_data);
       data_tree = show_data.tree;
       $.each(show_data.tree, function(show) {
         show = show_data.tree[show];
@@ -147,8 +140,6 @@ CSP = {
 
                 // Get the details for this concert.
                 CSP.getJSON(concert.url +"?callback=?", function(file_data) {
-                  //console.log(file_data);
-                  //console.log(concert);
                   var has_labels = false,
                     set_sha = false,
                     li_el = ul_el.find('li#concert_'+concert.sha);
