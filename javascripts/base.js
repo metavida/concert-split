@@ -26,30 +26,29 @@ CSP = {
     return false;
   },
   
-  // When triggered, show a dialog asking the user to use their browser's "Save As"
-  // feature instead of a simple click.
-  showDownloadPrompt: function(event) {
-    event.stopPropagation();
-    $.colorbox({innerWidth:400, innerHeight:150, inline:true, href:'#download_prompt'});
-    return false;
-  },
-  
   // When triggered from a concert link, show a dialog containing the "Set List"
   // blob relating to that concert.
   showSetlist: function(event) {
     event.stopPropagation();
-    
+    return CSP.showBlob($(this));
+  },
+  
+  showAudacity: function(event) {
+    event.stopPropagation();
+    return CSP.showBlob($(this));
+  },
+  
+  showBlob: function(blob_el, extra_html) {
     var opts = CSP.innerWidthAndHeight(),
-      setlist_el = $(this),
-      content = setlist_el.data('content'),
-      sha = setlist_el.data('sha');
+      content = blob_el.data('content'),
+      sha = blob_el.data('sha');
     if(content) {
       $.extend(opts, {html:'<pre>' + $.base64.decode(content) + '</pre>'});
       $.colorbox(opts);
     } else if (sha) {
       CSP.getJSON(blob_url + '/' + sha + '?callback=?', function(blob_data) {
-        setlist_el.data('content', blob_data.content.replace(/\n/g, ''));
-        $.extend(opts, {html:'<pre>' + $.base64.decode(setlist_el.data('content')) + '</pre>'});
+        blob_el.data('content', blob_data.content.replace(/\n/g, ''));
+        $.extend(opts, {html:'<pre>' + $.base64.decode(blob_el.data('content')) + '</pre>'});
         $.colorbox(opts);
       });
     }
@@ -170,7 +169,6 @@ CSP = {
                     li_el.append('<a href="'+ blob_url + label_sha +'" class="audacity_labels" data-sha="'+label_sha+'">'+ concert.path + '</a>');
                     //if(set_sha)
                     //  li_el.append(' (<a href="'+ blob_url + set_sha +'" class="set_list" data-sha="'+set_sha+'">view set list</a>)');
-                    $(li_el).find('a').click(CSP.showDownloadPrompt);
                   } else if(set_sha) {
                     li_el.append(concert.path);
                     li_el.append(' (<a href="#contribute" class="set_list" data-sha="'+set_sha+'">awaiting timestamps</a>)');
@@ -178,6 +176,8 @@ CSP = {
                     li_el.append(concert.path);
                     li_el.append(' (<a href="#contribute" class="brand_new">awaiting timestamps</a>)');
                   }
+                  $(li_el).find('.audacity_labels').click(CSP.showAudacity);
+                  $(li_el).find('.set_list').click(CSP.showSetlist);
                 });
               }
             });
@@ -185,8 +185,6 @@ CSP = {
         }
       });
     });
-    
-    $('#concerts .set_list').click(CSP.showSetlist);
   },
   
   getJSON: function(url, callback) {
