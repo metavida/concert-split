@@ -9,7 +9,8 @@ if(typeof(window.console) == 'undefined') {
   // GitHub URLs relating to the concert-split project.
   var root_url    = 'https://api.github.com/repos/metavida/concert-split/',
       commits_url = root_url + 'commits?sha=master',
-      tree_url    = root_url + 'git/trees/master';
+      tree_url    = root_url + 'git/trees/master',
+      blob_url    = root_url + 'git/blobs';
 
 CSP = {
   // A global counter... the number of AJAX requests we're still waiting on
@@ -37,9 +38,21 @@ CSP = {
   // blob relating to that concert.
   showSetlist: function(event) {
     event.stopPropagation();
-    opts = CSP.innerWidthAndHeight();
-    $.extend(opts, {href:$(this).attr('href'), iframe:true});
-    $.colorbox(opts);
+    
+    var opts = CSP.innerWidthAndHeight(),
+      setlist_el = $(this),
+      content = setlist_el.data('content'),
+      sha = setlist_el.data('sha');
+    if(content) {
+      $.extend(opts, {html:'<pre>' + $.base64.decode(content) + '</pre>'});
+      $.colorbox(opts);
+    } else if (sha) {
+      CSP.getJSON(blob_url + '/' + sha + '?callback=?', function(blob_data) {
+        setlist_el.data('content', blob_data.content.replace(/\n/g, ''));
+        $.extend(opts, {html:'<pre>' + $.base64.decode(setlist_el.data('content')) + '</pre>'});
+        $.colorbox(opts);
+      });
+    }
     return false;
   },
   
@@ -136,30 +149,34 @@ CSP = {
               concert = concert_data[concert];
               if(concert.type == 'tree') {
                 // Add a placeholder li (to preserve order)
-                ul_el.append('<li id="concert_'+concert.sha+'"></li>');
+                ul_el.append('<li id="concert_'+concert.sha+'" data-sha="'+concert.sha+'"></li>');
 
                 // Get the details for this concert.
                 CSP.getJSON(concert.url +"?callback=?", function(file_data) {
-                  var has_labels = false,
+                  var label_sha = false,
                     set_sha = false,
                     li_el = ul_el.find('li#concert_'+concert.sha);
                   $.each(file_data.tree, function(file) {
                     file = file_data.tree[file];
                     if(file.type == 'blob') {
                       if(file.path.match(/Audacity Labels/i)) {
-                        has_labels = file.sha;
+                        label_sha = file.sha;
                       } else if(file.path.match(/Set List/i)) {
                         set_sha = file.sha;
                       }
                     }
                   });
-                  if(has_labels && set_sha) {
-                    li_el.append('<a href="'+ blob_url + has_labels +'">'+ concert.path + '</a>');
-                    //li_el.append(' (<a href="'+ blob_url + set_sha +'">view set list</a>)');
+                  if(label_sha) {
+                    li_el.append('<a href="'+ blob_url + label_sha +'" class="audacity_labels" data-sha="'+label_sha+'">'+ concert.path + '</a>');
+                    //if(set_sha)
+                    //  li_el.append(' (<a href="'+ blob_url + set_sha +'" class="set_list" data-sha="'+set_sha+'">view set list</a>)');
                     $(li_el).find('a').click(CSP.showDownloadPrompt);
+                  } else if(set_sha) {
+                    li_el.append(concert.path);
+                    li_el.append(' (<a href="#contribute" class="set_list" data-sha="'+set_sha+'">awaiting timestamps</a>)');
                   } else {
                     li_el.append(concert.path);
-                    li_el.append(' (<a href="#contribute">awaiting timestamps</a>)');
+                    li_el.append(' (<a href="#contribute" class="brand_new">awaiting timestamps</a>)');
                   }
                 });
               }
@@ -168,6 +185,8 @@ CSP = {
         }
       });
     });
+    
+    $('#concerts .set_list').click(CSP.showSetlist);
   },
   
   getJSON: function(url, callback) {
