@@ -81,7 +81,7 @@ CSP = {
       // GitHub to see if there have been any recent commits.
       
       CSP.waitingOn++;
-      $.getJSON(commits_url, function(data) {
+      $.getJSON(commits_url + '?callback=?', function(data) {
         CSP.waitingOn--;
         var current_sha = data[0].sha;
 
@@ -139,7 +139,7 @@ CSP = {
                 ul_el.append('<li id="concert_'+concert.sha+'"></li>');
 
                 // Get the details for this concert.
-                CSP.getJSON(concert.url +"?callback=?", function(file_data) {
+                CSP.getJSON(concert.url + "?callback=?", function(file_data) {
                   var has_labels = false,
                     set_sha = false,
                     li_el = ul_el.find('li#concert_'+concert.sha);
