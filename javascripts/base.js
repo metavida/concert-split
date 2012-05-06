@@ -83,7 +83,7 @@ CSP = {
       CSP.waitingOn++;
       $.getJSON(commits_url + '&callback=?', function(data) {
         CSP.waitingOn--;
-        var current_sha = data[0].sha;
+        var current_sha = data.data[0].sha;
 
         if(last_sha == current_sha) {
           // If there haven't been any commits since last we checked
