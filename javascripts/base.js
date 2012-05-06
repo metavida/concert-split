@@ -81,7 +81,7 @@ CSP = {
       // GitHub to see if there have been any recent commits.
       
       CSP.waitingOn++;
-      $.getJSON(commits_url + '?callback=?', function(data) {
+      $.getJSON(commits_url + '&callback=?', function(data) {
         CSP.waitingOn--;
         var current_sha = data[0].sha;
 
