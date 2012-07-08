@@ -53,8 +53,8 @@ CSP = {
       var html = '',
         download_id_el = sha+'_download',
         download_opts = {
-          swf:'/javascripts/downloadify/downloadify.swf?v1',
-          downloadImage:'/images/download.png?v1',
+          swf:'/javascripts/downloadify/downloadify.swf?1',
+          downloadImage:'/images/download.png?1',
           width:'100', height:'30',
           filename:blob_el.html()+'.txt',
           data:content,
