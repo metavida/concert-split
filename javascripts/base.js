@@ -10,7 +10,13 @@ if(typeof(window.console) == 'undefined') {
   var root_url    = 'https://api.github.com/repos/metavida/concert-split/',
       commits_url = root_url + 'commits?sha=master',
       tree_url    = root_url + 'git/trees/master',
-      blob_url    = root_url + 'git/blobs';
+      blob_url    = root_url + 'git/blobs',
+      downloadify_opts = {
+        swf: '/javascripts/downloadify/downloadify.swf?v1',
+        downloadImage: '/images/download.png?v1',
+        width: '100',
+        height: '30'
+      };
 
 CSP = {
   // A global counter... the number of AJAX requests we're still waiting on
@@ -34,6 +40,7 @@ CSP = {
   },
   
   showAudacity: function(event) {
+    console.log('start showAudacity');
     event.stopPropagation();
     return CSP.showBlob($(this));
   },
@@ -42,18 +49,43 @@ CSP = {
     var opts = CSP.innerWidthAndHeight(),
       content = blob_el.data('content'),
       sha = blob_el.data('sha');
-    if(content) {
-      $.extend(opts, {html:'<pre>' + $.base64.decode(content) + '</pre>'});
+      
+    var render_blob = function(content) {
+      console.log(blob_el);
+      var html = '',
+        download_id_el = sha+'_download',
+        download_opts = $.extend(
+          {
+            'filename': blob_el.html()+'.txt',
+            'data': content,
+            'dataType': 'base64'
+          }, downloadify_opts
+        );
+      console.log(download_opts);
+      html += '<p><span id="'+ download_id_el +'"></span></p>'+"\n";
+      html += '<pre>' + $.base64.decode(content) + '</pre>'+"\n";
+      $.extend(opts, {
+        html:html,
+        onComplete:function() {
+          console.log([download_id_el, $('#'+download_id_el)]);
+          $('#'+download_id_el).downloadify(download_opts);
+        }
+      });
       $.colorbox(opts);
+    };
+    
+    if(content) {
+      render_blob(content);
     } else if (sha) {
       CSP.getJSON(blob_url + '/' + sha + '?callback=?', function(blob_data) {
         blob_el.data('content', blob_data.content.replace(/\n/g, ''));
-        $.extend(opts, {html:'<pre>' + $.base64.decode(blob_el.data('content')) + '</pre>'});
-        $.colorbox(opts);
+        render_blob(blob_el.data('content'));
       });
     }
     return false;
   },
+  
+  
   
   // Hilight the area of HTML that the current URL anchor referrs to
   hilightCurrentAnchor: function() {
