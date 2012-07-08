@@ -60,17 +60,21 @@ CSP = {
           data:content,
           dataType:'base64'
         };
-      html += '<div class="buttons"><span id="'+ download_id_el +'"></span></div>'+"\n";
-      html += '<div class="scroll"><pre>' + $.base64.decode(content) + '</pre></div>'+"\n";
+      html += '<table>'+"\n"
+      html += '<tr class="buttons">'+"\n"
+      html += '<td><span id="'+ download_id_el +'"></span></td>'+"\n";
+      html += '<td class="message"></td>'+"\n";
+      html += '<tr><td colspan="2"><div class="scroll"><pre>' + $.base64.decode(content) + '</pre></div></td></tr>'+"\n";
+      html += "</table>"
       $.extend(colorbox_opts, {
         fixed:true, scrolling:false,
         html:html,
         onComplete:function() {
           if(swfobject.getFlashPlayerVersion('10')) {
             $('#'+download_id_el).downloadify(download_opts);
-            $('#cboxLoadedContent .buttons').append(messages.download);
+            $('#cboxLoadedContent .message').html(messages.download);
           } else {
-            $('#cboxLoadedContent .buttons').append(messages.broken);
+            $('#cboxLoadedContent .message').html(messages.broken);
           }
           setTimeout(function() {
             $('#cboxLoadedContent .scroll').height(
