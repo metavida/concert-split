@@ -9,7 +9,8 @@ if(typeof(window.console) == 'undefined') {
   // GitHub URLs relating to the concert-split project.
   var root_url    = 'https://api.github.com/repos/metavida/concert-split/',
       commits_url = root_url + 'commits?sha=master',
-      tree_url    = root_url + 'git/trees/master';
+      tree_url    = root_url + 'git/trees/master',
+      blob_url    = root_url + 'git/blobs';
 
 CSP = {
   // A global counter... the number of AJAX requests we're still waiting on
@@ -20,16 +21,8 @@ CSP = {
   showTutorialVideo: function(event) {
     event.stopPropagation();
     opts = CSP.innerWidthAndHeight(0.582); // The video is 1280x745
-    $.extend(opts, {href:$(this).attr('href'), iframe:true});
+    $.extend(opts, {href:$(this).attr('href'), iframe:true, fixed:true});
     $.colorbox(opts);
-    return false;
-  },
-  
-  // When triggered, show a dialog asking the user to use their browser's "Save As"
-  // feature instead of a simple click.
-  showDownloadPrompt: function(event) {
-    event.stopPropagation();
-    $.colorbox({innerWidth:400, innerHeight:150, inline:true, href:'#download_prompt'});
     return false;
   },
   
@@ -37,11 +30,73 @@ CSP = {
   // blob relating to that concert.
   showSetlist: function(event) {
     event.stopPropagation();
-    opts = CSP.innerWidthAndHeight();
-    $.extend(opts, {href:$(this).attr('href'), iframe:true});
-    $.colorbox(opts);
+    return CSP.showBlob($(this), {
+      download: "Download this set list if you're interested helping out. Then close this dialog and scroll down, to read more about contributing to the project.",
+      broken: "This set list hasn't yet been split. If you're intersted in helping out, close this dialog and scroll down, to read more about contributing to the project."
+    });
+  },
+  
+  showAudacity: function(event) {
+    event.stopPropagation();
+    return CSP.showBlob($(this), {
+      download: "Download these Audacity timestamps if you're interested in splitting this concert.",
+      broken: "Please copy the text, below, and save it in a text file on your computer. You can then import it into Audacity."
+    });
+  },
+  
+  showBlob: function(blob_el, messages) {
+    var colorbox_opts = CSP.innerWidthAndHeight(),
+      content = blob_el.data('content'),
+      sha = blob_el.data('sha');
+      
+    var render_blob = function(content) {
+      var html = '',
+        download_id_el = sha+'_download',
+        download_opts = {
+          swf:'/javascripts/downloadify/downloadify.swf?1',
+          downloadImage:'/images/download.png?1',
+          width:'100', height:'30',
+          filename:blob_el.html()+'.txt',
+          data:content,
+          dataType:'base64'
+        };
+      html += '<table>'+"\n";
+      html += '<tr class="buttons">'+"\n";
+      html += '<td><div id="'+ download_id_el +'"></div></td>'+"\n";
+      html += '<td class="message"></td>'+"\n";
+      html += '<tr><td colspan="2"><div class="scroll"><pre>' + $.base64.decode(content) + '</pre></div></td></tr>'+"\n";
+      html += "</table>";
+      $.extend(colorbox_opts, {
+        fixed:true, scrolling:false,
+        html:html,
+        onComplete:function() {
+          if(swfobject.hasFlashPlayerVersion('10')) {
+            $('#'+download_id_el).downloadify(download_opts).
+              height(download_opts.height).parent().width(download_opts.width);
+            $('#cboxLoadedContent .message').html(messages.download);
+          } else {
+            $('#cboxLoadedContent .message').html(messages.broken);
+          }
+          $('#cboxLoadedContent .scroll').height(
+            $('#cboxLoadedContent').height() - $('#cboxLoadedContent .buttons').outerHeight()
+          ).width($('#cboxLoadedContent').width());
+        }
+      });
+      $.colorbox(colorbox_opts);
+    };
+    
+    if(content) {
+      render_blob(content);
+    } else if (sha) {
+      CSP.getJSON(blob_url + '/' + sha + '?callback=?', function(blob_data) {
+        blob_el.data('content', blob_data.content.replace(/\n/g, ''));
+        render_blob(blob_el.data('content'));
+      });
+    }
     return false;
   },
+  
+  
   
   // Hilight the area of HTML that the current URL anchor referrs to
   hilightCurrentAnchor: function() {
@@ -105,8 +160,7 @@ CSP = {
   },
   
   renderConcertTree: function() {
-    var blob_url = 'https://github.com/api/v2/json/blob/show/metavida/concert-split/',
-      concerts_el = $('#concerts'),
+    var concerts_el = $('#concerts'),
       loading_el = $('#concerts_loading'),
       html = '';
     
@@ -136,31 +190,36 @@ CSP = {
               concert = concert_data[concert];
               if(concert.type == 'tree') {
                 // Add a placeholder li (to preserve order)
-                ul_el.append('<li id="concert_'+concert.sha+'"></li>');
+                ul_el.append('<li id="concert_'+concert.sha+'" data-sha="'+concert.sha+'"></li>');
 
                 // Get the details for this concert.
-                CSP.getJSON(concert.url + "?callback=?", function(file_data) {
-                  var has_labels = false,
+                CSP.getJSON(concert.url +"?callback=?", function(file_data) {
+                  var label_sha = false,
                     set_sha = false,
                     li_el = ul_el.find('li#concert_'+concert.sha);
                   $.each(file_data.tree, function(file) {
                     file = file_data.tree[file];
                     if(file.type == 'blob') {
                       if(file.path.match(/Audacity Labels/i)) {
-                        has_labels = file.sha;
+                        label_sha = file.sha;
                       } else if(file.path.match(/Set List/i)) {
                         set_sha = file.sha;
                       }
                     }
                   });
-                  if(has_labels && set_sha) {
-                    li_el.append('<a href="'+ blob_url + has_labels +'">'+ concert.path + '</a>');
-                    //li_el.append(' (<a href="'+ blob_url + set_sha +'">view set list</a>)');
-                    $(li_el).find('a').click(CSP.showDownloadPrompt);
+                  if(label_sha) {
+                    li_el.append('<a href="javascript:;" class="audacity_labels" data-sha="'+label_sha+'">'+ concert.path + '</a>');
+                    //if(set_sha)
+                    //  li_el.append(' (<a href="javascript:;" class="set_list" data-sha="'+set_sha+'">view set list</a>)');
+                  } else if(set_sha) {
+                    li_el.append(concert.path);
+                    li_el.append(' (<a href="#contribute" class="set_list" data-sha="'+set_sha+'">awaiting timestamps</a>)');
                   } else {
                     li_el.append(concert.path);
-                    li_el.append(' (<a href="#contribute">awaiting timestamps</a>)');
+                    li_el.append(' (<a href="#contribute" class="brand_new">awaiting timestamps</a>)');
                   }
+                  $(li_el).find('.audacity_labels').click(CSP.showAudacity);
+                  $(li_el).find('.set_list').click(CSP.showSetlist);
                 });
               }
             });
