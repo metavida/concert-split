@@ -157,8 +157,7 @@ CSP = {
   },
   
   renderConcertTree: function() {
-    var blob_url = 'https://github.com/api/v2/json/blob/show/metavida/concert-split/',
-      concerts_el = $('#concerts'),
+    var concerts_el = $('#concerts'),
       loading_el = $('#concerts_loading'),
       html = '';
     
@@ -206,9 +205,9 @@ CSP = {
                     }
                   });
                   if(label_sha) {
-                    li_el.append('<a href="'+ blob_url + label_sha +'" class="audacity_labels" data-sha="'+label_sha+'">'+ concert.path + '</a>');
+                    li_el.append('<a href="javascript:;" class="audacity_labels" data-sha="'+label_sha+'">'+ concert.path + '</a>');
                     //if(set_sha)
-                    //  li_el.append(' (<a href="'+ blob_url + set_sha +'" class="set_list" data-sha="'+set_sha+'">view set list</a>)');
+                    //  li_el.append(' (<a href="javascript:;" class="set_list" data-sha="'+set_sha+'">view set list</a>)');
                   } else if(set_sha) {
                     li_el.append(concert.path);
                     li_el.append(' (<a href="#contribute" class="set_list" data-sha="'+set_sha+'">awaiting timestamps</a>)');
