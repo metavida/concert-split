@@ -10,13 +10,7 @@ if(typeof(window.console) == 'undefined') {
   var root_url    = 'https://api.github.com/repos/metavida/concert-split/',
       commits_url = root_url + 'commits?sha=master',
       tree_url    = root_url + 'git/trees/master',
-      blob_url    = root_url + 'git/blobs',
-      downloadify_opts = {
-        swf: '/javascripts/downloadify/downloadify.swf?v1',
-        downloadImage: '/images/download.png?v1',
-        width: '100',
-        height: '30'
-      };
+      blob_url    = root_url + 'git/blobs';
 
 CSP = {
   // A global counter... the number of AJAX requests we're still waiting on
@@ -27,7 +21,7 @@ CSP = {
   showTutorialVideo: function(event) {
     event.stopPropagation();
     opts = CSP.innerWidthAndHeight(0.582); // The video is 1280x745
-    $.extend(opts, {href:$(this).attr('href'), iframe:true});
+    $.extend(opts, {href:$(this).attr('href'), iframe:true, fixed:true});
     $.colorbox(opts);
     return false;
   },
@@ -36,42 +30,56 @@ CSP = {
   // blob relating to that concert.
   showSetlist: function(event) {
     event.stopPropagation();
-    return CSP.showBlob($(this));
+    return CSP.showBlob($(this), {
+      download: "Download this set list if you're interested helping the project out. Then close this window and scroll down to read more about contributing to the project.",
+      broken: ""
+    });
   },
   
   showAudacity: function(event) {
-    console.log('start showAudacity');
     event.stopPropagation();
-    return CSP.showBlob($(this));
+    return CSP.showBlob($(this), {
+      download: "Download these Audacity timestamps if you're interested in splitting this concert.",
+      broken: "Please copy the text, below, and save it in a text file on your computer. You can then import it into Audacity."
+    });
   },
   
-  showBlob: function(blob_el, extra_html) {
-    var opts = CSP.innerWidthAndHeight(),
+  showBlob: function(blob_el, messages) {
+    var colorbox_opts = CSP.innerWidthAndHeight(),
       content = blob_el.data('content'),
       sha = blob_el.data('sha');
       
     var render_blob = function(content) {
-      console.log(blob_el);
       var html = '',
         download_id_el = sha+'_download',
-        download_opts = $.extend(
-          {
-            'filename': blob_el.html()+'.txt',
-            'data': content,
-            'dataType': 'base64'
-          }, downloadify_opts
-        );
-      console.log(download_opts);
-      html += '<p><span id="'+ download_id_el +'"></span></p>'+"\n";
-      html += '<pre>' + $.base64.decode(content) + '</pre>'+"\n";
-      $.extend(opts, {
+        download_opts = {
+          swf:'/javascripts/downloadify/downloadify.swf?v1',
+          downloadImage:'/images/download.png?v1',
+          width:'100', height:'30',
+          filename:blob_el.html()+'.txt',
+          data:content,
+          dataType:'base64'
+        };
+      html += '<div class="buttons"><span id="'+ download_id_el +'"></span></div>'+"\n";
+      html += '<div class="scroll"><pre>' + $.base64.decode(content) + '</pre></div>'+"\n";
+      $.extend(colorbox_opts, {
+        fixed:true, scrolling:false,
         html:html,
         onComplete:function() {
-          console.log([download_id_el, $('#'+download_id_el)]);
-          $('#'+download_id_el).downloadify(download_opts);
+          if(swfobject.getFlashPlayerVersion('10')) {
+            $('#'+download_id_el).downloadify(download_opts);
+            $('#cboxLoadedContent .buttons').append(messages.download);
+          } else {
+            $('#cboxLoadedContent .buttons').append(messages.broken);
+          }
+          setTimeout(function() {
+            $('#cboxLoadedContent .scroll').height(
+              $('#cboxLoadedContent').height() - $('#cboxLoadedContent .buttons').outerHeight()
+            );
+          }, 500);
         }
       });
-      $.colorbox(opts);
+      $.colorbox(colorbox_opts);
     };
     
     if(content) {
