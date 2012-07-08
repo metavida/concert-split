@@ -42,4 +42,4 @@
     #cboxContent table{width:100%;}
     #cboxContent .buttons td{padding-bottom:10px;}
     #cboxContent td.message{padding-left:20px;}
-    #cboxContent .scroll{overflow:auto;}
+    #cboxContent .scroll{overflow:vertical;}

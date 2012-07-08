@@ -31,8 +31,8 @@ CSP = {
   showSetlist: function(event) {
     event.stopPropagation();
     return CSP.showBlob($(this), {
-      download: "Download this set list if you're interested helping the project out. Then close this window and scroll down to read more about contributing to the project.",
-      broken: ""
+      download: "Download this set list if you're interested helping out. Then close this dialog and scroll down, to read more about contributing to the project.",
+      broken: "This set list hasn't yet been split. If you're intersted in helping out, close this dialog and scroll down, to read more about contributing to the project."
     });
   },
   
@@ -60,27 +60,26 @@ CSP = {
           data:content,
           dataType:'base64'
         };
-      html += '<table>'+"\n"
-      html += '<tr class="buttons">'+"\n"
-      html += '<td><span id="'+ download_id_el +'"></span></td>'+"\n";
+      html += '<table>'+"\n";
+      html += '<tr class="buttons">'+"\n";
+      html += '<td><div id="'+ download_id_el +'"></div></td>'+"\n";
       html += '<td class="message"></td>'+"\n";
       html += '<tr><td colspan="2"><div class="scroll"><pre>' + $.base64.decode(content) + '</pre></div></td></tr>'+"\n";
-      html += "</table>"
+      html += "</table>";
       $.extend(colorbox_opts, {
         fixed:true, scrolling:false,
         html:html,
         onComplete:function() {
-          if(swfobject.getFlashPlayerVersion('10')) {
-            $('#'+download_id_el).downloadify(download_opts);
+          if(swfobject.hasFlashPlayerVersion('10')) {
+            $('#'+download_id_el).downloadify(download_opts).
+              height(download_opts.height).parent().width(download_opts.width);
             $('#cboxLoadedContent .message').html(messages.download);
           } else {
             $('#cboxLoadedContent .message').html(messages.broken);
           }
-          setTimeout(function() {
-            $('#cboxLoadedContent .scroll').height(
-              $('#cboxLoadedContent').height() - $('#cboxLoadedContent .buttons').outerHeight()
-            );
-          }, 500);
+          $('#cboxLoadedContent .scroll').height(
+            $('#cboxLoadedContent').height() - $('#cboxLoadedContent .buttons').outerHeight()
+          ).width($('#cboxLoadedContent').width());
         }
       });
       $.colorbox(colorbox_opts);
