@@ -1,0 +1,21 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/concerts/2012/07/20120728_concerts_firstaid.mp3?dl=1
+Track Names: http://www.npr.org/event/music/156924791/first-aid-kit-live-in-concert-newport-folk-2012
+
+#   Track Name                 Start At
+==============                 ========
+    (intro)                    00:00
+1.  This Old Routine           ??:??
+    Blue                       ??:??
+    Hard Believer              ??:??
+    Our Own Pretty Ways        ??:??
+5.  Diamonds & Rust            ??:??
+    To A Poet                  ??:??
+    Wolf/When I Grow Up        ??:??
+    Emmylou                    ??:??
+    I Met Up With the King     ??:??
+10. The Lion's Roar            ??:??
+    King of the World          ??:??
+    (end)                      ??:??

@@ -1,0 +1,29 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/asc/2012/07/20120716_asc_bestcoast.mp3?dl=1o
+Track Names: http://www.npr.org/event/music/156865457/best-coast-in-concert
+
+#   Track Name                        Start At
+==============                        ========
+    (intro)                           00:00
+1.  The End                           ??:??
+    Crazy For You                     ??:??
+    Goodbye                           ??:??
+    Last Year                         ??:??
+5.  Summer Mood                       ??:??
+    The Only Place                    ??:??
+    No One Like You                   ??:??
+    How They Want Me To Be            ??:??
+    Why I Cry                         ??:??
+10. Dreaming My Life Away             ??:??
+    Let's Go Home                     ??:??
+    Our Deal                          ??:??
+    When The Sun Don't Shine          ??:??
+    Do You Love Me Like You Used To   ??:??
+15. Something In The Way              ??:??
+    I Want To                         ??:??
+    Sun Was High (So Was I)           ??:??
+    When I'm With You                 ??:??
+19. Boyfriend                         ??:??
+    (end)                             ??:??
