@@ -1,0 +1,26 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/asc/2012/08/20120819_asc_dpinterview.mp3?dl=1
+Track Names: http://www.npr.org/event/music/158829158/live-friday-dirty-projectors-with-wye-oak
+
+#   Track Name                Start At
+==============                ========
+    (intro)                   0:00:00
+1.  Swing Lo Magellan         ?:??:??
+    Offspring Are Blank       ?:??:??
+    About To Die              ?:??:??
+    The Socialites            ?:??:??
+5.  Gun Has No Trigger        ?:??:??
+    Cannibal Resource         ?:??:??
+    See What She Is Seeing    ?:??:??
+    Wittenberg IV             ?:??:??
+    No Intention              ?:??:??
+10. Maybe That Was It         ?:??:??
+    Just From Chevron         ?:??:??
+    Useful Chamber            ?:??:??
+    Unto Ceasar               ?:??:??
+    Dance 4 U                 ?:??:??
+15. Stillness Is The Move     ?:??:??
+16. Impregnable Question      ?:??:??
+    (end)                     ?:??:??

@@ -1,0 +1,20 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/concerts/2012/08/20120817_concerts_tallestman.mp3?dl=1
+Track Names: http://www.npr.org/2012/07/31/157664983/the-tallest-man-on-earth-live-in-concert-newport-folk-2012
+
+#   Track Name                  Start At
+==============                  ========
+    (intro)                     00:00
+1.  To Just Grow Away           ??:??
+    Love Is All                 ??:??
+    1904                        ??:??
+    The Gardener                ??:??
+5.  Criminals                   ??:??
+    There's No Leaving Now      ??:??
+    Where Do My Blackbird Fly   ??:??
+    Wind and Walls              ??:??
+    Like The Wheel              ??:??
+10. King of Spain               ??:??
+    (end)                       ??:??

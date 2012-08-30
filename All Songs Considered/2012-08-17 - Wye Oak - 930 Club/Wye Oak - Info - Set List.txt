@@ -1,0 +1,20 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/concerts/2012/08/20120819_concerts_wyeoakfin.mp3?dl=1
+Track Names: http://www.npr.org/event/music/159053023/wye-oak-in-concert-from-washington-d-c
+             http://www.setlist.fm/setlist/wye-oak/2012/930-club-washington-dc-4bdc0fb2.html
+
+#   Track Name              Start At
+==============              ========
+    (intro)                 00:00
+1.  New Song                ??:??
+    Holy Holy               ??:??
+    Plains                  ??:??
+    Spiral                  ??:??
+5.  New Song                ??:??
+    Hot As Day              ??:??
+    That I Do               ??:??
+    Dogs Eyes               ??:??
+9.  Civilian                ??:??
+    (end)                   ??:??
