@@ -104,7 +104,7 @@ CSP = {
     // We need a setTimeout because the URL doesn't update until after the onclick events finish.
     setTimeout(function() {
       var anchor = window.location.href.match(/#(.+)/);
-      if(anchor) $('a[name='+anchor[1]+']').next('div').addClass(klass);
+      if(anchor) $('#'+anchor[1]).addClass(klass);
     }, 1);
     setTimeout(function() { $('.'+klass).removeClass(klass); }, 2000);
   },

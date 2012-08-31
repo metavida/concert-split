@@ -1,19 +1,18 @@
 ---
 published: true
 ---
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="author" content="Marcos Wright Kuhns" />
-  <meta name="keywords" content="concert, audio, music, split, tracks, audacity, npr" />
-  <meta name="description" content="{% include meta_description.txt %}" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="author" content="Marcos Wright Kuhns">
+  <meta name="keywords" content="concert, audio, music, split, tracks, audacity, npr">
+  <meta name="description" content="{% include meta_description.txt %}">
   
   <title>The Concert-Split Project</title>
-  <link charset="utf-8" href="stylesheets/base.css?6" rel="stylesheet" type="text/css" />
-  <link charset="utf-8" href="stylesheets/colorbox.css?3" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/base.css?6" rel="stylesheet" type="text/css">
+  <link href="stylesheets/colorbox.css?3" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/jquery.colorbox-min.js?2"></script>
   <script type="text/javascript" src="javascripts/jstorage.min.js?1"></script>
@@ -22,7 +21,7 @@ published: true
 <body>
 
 <div>
-  <a href="http://github.com/metavida/concert-split"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  <a href="http://github.com/metavida/concert-split"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 </div>
 
 <div id="container">
@@ -39,43 +38,42 @@ published: true
   <div id="description_icons" class="details clearfix">
     <div class="music_big">
       <span>
-        <img src="images/music_big.png" alt="A single music file" />
+        <img src="images/music_big.png" alt="A single music file">
         one-big-concert.mp3
       </span>
     </div>
     <div class="split_arrow">
-      <img src="images/arrow_right.png" alt="Becomes" />
+      <img src="images/arrow_right.png" alt="Becomes">
     </div>
     <div class="music_lil">
       <span class="lil_1">
-        <img src="images/music_lil.png" alt="Many music files" />
+        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 1.mp3
       </span>
       <span class="lil_2">
-        <img src="images/music_lil.png" alt="Many music files" />
+        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 2.mp3
       </span>
       <span class="lil_3">
-        <img src="images/music_lil.png" alt="Many music files" />
+        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 3.mp3
       </span>
       <span class="lil_4">
-        <img src="images/music_lil.png" alt="Many music files" />
+        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 4.mp3
       </span>
       <span class="lil_5">
-        <img src="images/music_lil.png" alt="Many music files" />
+        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 5.mp3
       </span>
     </div>
   </div>
 
-  <a name="usage"></a>
-  <div>
+  <div id="usage">
     <h2>Using Concert-Split</h2>
     <div class="details" style="float:right;">
       <a id="intro_video" href="http://www.youtube.com/v/aWPoJ6sm8HU&amp;autoplay=1" target="_blank">
-        <img src="images/intro_video.jpg" width="300" height="193" alt="A quick video showing you how to use the Concert-Split Project." />
+        <img src="images/intro_video.jpg" width="300" height="193" alt="A quick video showing you how to use the Concert-Split Project.">
       </a>
     </div>
   
@@ -90,9 +88,8 @@ published: true
     <p>If you don't see a concert you want to split, help us out. <a href="#contribute">Contribute to the project</a> by suggesting the concert.</p>
   </div>
   
-  <a name="concerts"></a>
   <div id="concerts">
-    <img id="concerts_loading" src="images/loading.gif" alt="Loading Data..." style="display:none;" />
+    <img id="concerts_loading" src="images/loading.gif" alt="Loading Data..." style="display:none;">
   </div>
   <div id="static_concerts">
     <p><span class="note">Note:</span> It looks your web browser isn't running JavaScript. Downloading the Audacity Label files for the following concerts requires JavaScript.</p>
@@ -100,8 +97,7 @@ published: true
     {% include available_concerts.html %}
   </div>
   
-  <a name="tools"></a>
-  <div>
+  <div id="tools">
     <h2>Required Tools</h2>
     <ul>
       <li>The <a href="http://audacity.sourceforge.net">Audacity</a> audio editor</li>
@@ -109,8 +105,7 @@ published: true
     </ul>
   </div>
 
-  <a name="contribute"></a>
-  <div>
+  <div id="contribute">
     <h2>Contributing to the project</h2>
     <p>There are three basic steps to getting a song listed in the Concert-Split Project &amp; you can get involved at whatever level you like.</p>
     <ol>
@@ -125,8 +120,8 @@ published: true
   <h2>License</h2>
   
   <p>
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" target="_blank" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" align="right" /></a>
-    All text in the <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Concert-Split</span> Project, including Set Lists &amp; Audacity Lable files, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/" target="_blank">Creative Commons Attribution-Share Alike 3.0 United States License</a>.<br />
+    <a class="license" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png"></a>
+    All text in the <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Concert-Split</span> Project, including Set Lists &amp; Audacity Lable files, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/" target="_blank">Creative Commons Attribution-Share Alike 3.0 United States License</a>.<br>
   </p>
   
   <p>Icons by <a href="http://www.fatcow.com/free-icons/index.bml">FatCow Web Hosting</a> / <a href="http://creativecommons.org/licenses/by/3.0/us/" target="_blank">CC BY 3.0</a></p>
