@@ -7,14 +7,26 @@ Track Names: http://www.npr.org/2012/07/31/157664983/the-tallest-man-on-earth-li
 #   Track Name                  Start At
 ==============                  ========
     (intro)                     00:00
-1.  To Just Grow Away           ??:??
-    Love Is All                 ??:??
-    1904                        ??:??
-    The Gardener                ??:??
-5.  Criminals                   ??:??
-    There's No Leaving Now      ??:??
-    Where Do My Blackbird Fly   ??:??
-    Wind and Walls              ??:??
-    Like The Wheel              ??:??
-10. King of Spain               ??:??
-    (end)                       ??:??
+1.  To Just Grow Away           00:30
+    Love Is All                 03:47
+    (pause)                     08:20
+    1904                        08:30
+    (talking)                   12:07
+    I Won't Be Found            12:38*
+    The Gardener                16:01
+    (talking)                   20:01
+5.  Criminals                   20:35*
+    (talking)                   24:13
+    There's No Leaving Now      24:22
+    (talking)                   29:00
+    Where Do My Blackbird Fly   29:20*
+    (talking)                   32:57
+    Leading Me Now              33:50*
+    (talking)                   36:41
+    Wind and Walls              36:51*
+    (talking)                   40:53
+    Like The Wheel              41:25
+10. King of Spain               45:02
+    (talking)                   49:04
+    The Dreamer                 49:19
+    (end)                       53:23
