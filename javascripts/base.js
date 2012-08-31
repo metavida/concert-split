@@ -161,9 +161,10 @@ CSP = {
   
   renderConcertTree: function() {
     var concerts_el = $('#concerts'),
-      loading_el = $('#concerts_loading'),
+      loading_el = $('#concerts_loading').show(),
       html = '';
     
+    $('#static_concerts').hide();
     CSP.getJSON(tree_url + '?callback=?', function(show_data) {
       data_tree = show_data.tree;
       $.each(show_data.tree, function(show) {

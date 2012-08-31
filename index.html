@@ -12,12 +12,12 @@ published: true
   <meta name="description" content="{% include meta_description.txt %}" />
   
   <title>The Concert-Split Project</title>
-  <link charset="utf-8" href="stylesheets/base.css?5" rel="stylesheet" type="text/css" />
+  <link charset="utf-8" href="stylesheets/base.css?6" rel="stylesheet" type="text/css" />
   <link charset="utf-8" href="stylesheets/colorbox.css?3" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/jquery.colorbox-min.js?2"></script>
   <script type="text/javascript" src="javascripts/jstorage.min.js?1"></script>
-  <script type="text/javascript" src="javascripts/base.js?7"></script>
+  <script type="text/javascript" src="javascripts/base.js?8"></script>
 </head>
 <body>
 
@@ -90,7 +90,12 @@ published: true
   
   <a name="concerts"></a>
   <div id="concerts">
-    <img id="concerts_loading" src="images/loading.gif" alt="Loading Data...">
+    <img id="concerts_loading" src="images/loading.gif" alt="Loading Data..." style="display:none;">
+  </div>
+  <div id="static_concerts">
+    <p><span class="note">Note:</span> It looks your web browser isn't running JavaScript. Downloading the Audacity Label files for the following concerts requires JavaScript.</p>
+    
+    {% include available_concerts.html %}
   </div>
   
   <a name="tools"></a>
