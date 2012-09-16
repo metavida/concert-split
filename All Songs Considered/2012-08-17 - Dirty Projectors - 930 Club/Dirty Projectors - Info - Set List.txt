@@ -7,20 +7,30 @@ Track Names: http://www.npr.org/event/music/158829158/live-friday-dirty-projecto
 #   Track Name                Start At
 ==============                ========
     (intro)                   0:00:00
-1.  Swing Lo Magellan         ?:??:??
-    Offspring Are Blank       ?:??:??
-    About To Die              ?:??:??
-    The Socialites            ?:??:??
-5.  Gun Has No Trigger        ?:??:??
-    Cannibal Resource         ?:??:??
-    See What She Is Seeing    ?:??:??
-    Wittenberg IV             ?:??:??
-    No Intention              ?:??:??
-10. Maybe That Was It         ?:??:??
-    Just From Chevron         ?:??:??
-    Useful Chamber            ?:??:??
-    Unto Ceasar               ?:??:??
-    Dance 4 U                 ?:??:??
-15. Stillness Is The Move     ?:??:??
-16. Impregnable Question      ?:??:??
-    (end)                     ?:??:??
+1.  Swing Lo Magellan         0:00:42
+    (talking)                 0:03:30
+    Offspring Are Blank       0:03:42
+    About To Die              0:08:10
+    (silence)                 0:12:08
+    The Socialites            0:12:19
+    (silence)                 0:16:30
+5.  Gun Has No Trigger        0:16:04*
+    (talking)                 0:20:00
+    Cannibal Resource         0:20:16
+    (talking)                 0:24:11
+    See What She Is Seeing    0:26:27
+    Wittenberg IV             0:30:26*
+    (silence)                 0:33:13
+    No Intention              0:33:22
+    (talking)                 0:37:55
+10. Maybe That Was It         0:38:39
+    (silence)                 0:43:49
+    Just From Chevron         0:43:18
+    Useful Chamber            0:47:54
+    (talking)                 0:55:36
+    Unto Ceasar               0:55:54*
+    (break)                   0:59:38
+    Dance 4 U                 1:03:00
+15. Stillness Is The Move     1:06:51*
+16. Impregnable Question      1:11:35
+    (end)                     1:14:30
