@@ -10,16 +10,18 @@ Track Names: http://www.npr.org/event/music/159053023/wye-oak-in-concert-from-wa
     (intro)                 00:00
 1.  New Song                00:23
     Holy Holy               06:03
-    Plains                  10:30
-    (talking)               14:42*
-    Spiral                  15:37*
-5.  New Song                21:17*
-    (talking)               27:20
-    Hot As Day              28:09
-    That I Do               32:11
+    (interlude)             10:27
+    Plains                  10:41.5
+    (talking)               14:41
+    Spiral                  15:37
+5.  New Song                21:16.5
+    (talking)               27:19
+    Hot As Day              28:08
+    (interlude)             32:05
+    That I Do               32:50
     (interlude)             36:18
     Dogs Eyes               36:54
     (talking)               40:10
-    (interlude)             40:50
+    (interlude)             40:42.15
 9.  Civilian                41:26
     (end)                   45:30
