@@ -1,0 +1,24 @@
+Set List
+========
+
+MP3 Source:  http://pd.npr.org/anon.npr-mp3/npr/concerts/2014/07/20140726_concerts_nickel.mp3?dl=1
+Track Names: http://www.npr.org/2014/07/21/333725931/nickel-creek-live-in-concert-newport-folk-2014
+
+#   Track Name                Start At
+==============                ========
+    (intro)                   00:00
+1.  Rest of My Life           :
+    Scotch & Chocolate        :
+    Destination               :
+    The Lighthouse's Tale     :
+5.  Smoothie Song             :
+    Reasons Why               :
+    21st of May               :
+    When In Rome              :
+    Anthony                   :
+10. Ode to a Butterfly        :
+    Hayloft                   :
+    The Ledge                 :
+    When You Come Back Down   :
+    Somebody More Like You    :
+15. The Fox                   :
