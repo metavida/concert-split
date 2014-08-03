@@ -14,6 +14,6 @@ Full instructions on how you can contribute can also be found on [the project we
 
 **Note:** Please never add audio files, original or split, to this project. The project is intended to only contain set lists & audacity label files.
 
-[website]:    http://metavida.github.com/concert-split/
+[website]:    http://marcos.wrightkuhns.com/concert-split/
 [screencast]: http://www.youtube.com/watch?v=aWPoJ6sm8HU
-[contribute]: http://metavida.github.com/concert-split/#contribute
+[contribute]: http://marcos.wrightkuhns.com/concert-split/#contribute
