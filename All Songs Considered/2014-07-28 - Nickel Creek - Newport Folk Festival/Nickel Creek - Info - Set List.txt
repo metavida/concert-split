@@ -6,19 +6,31 @@ Track Names: http://www.npr.org/2014/07/21/333725931/nickel-creek-live-in-concer
 
 #   Track Name                Start At
 ==============                ========
-    (intro)                   00:00
-1.  Rest of My Life           :
-    Scotch & Chocolate        :
-    Destination               :
-    The Lighthouse's Tale     :
-5.  Smoothie Song             :
-    Reasons Why               :
-    21st of May               :
-    When In Rome              :
-    Anthony                   :
-10. Ode to a Butterfly        :
-    Hayloft                   :
-    The Ledge                 :
-    When You Come Back Down   :
-    Somebody More Like You    :
-15. The Fox                   :
+    (intro)                   0:00:00
+1.  Rest of My Life           0:01:00
+    Scotch & Chocolate        0:04:46
+    (talking)                 0:08:08
+    Destination               0:08:14
+    (talking)                 0:12:17
+    The Lighthouse's Tale     0:12:37
+    (silence)                 0:18:16
+5.  Smoothie Song             0:18:30
+    (talking)                 0:23:25
+    Reasons Why               0:23:36
+    (talking)                 0:27:45
+    21st of May               0:28:30
+    When In Rome              0:31:34
+    (talking)                 0:36:16
+    Anthony                   0:37:35
+10. Ode to a Butterfly        0:39:25
+    (talking)                 0:44:14
+    Hayloft                   0:44:28
+    (talking)                 0:47:59
+    The Ledge                 0:48:43
+    (talking)                 0:51:27
+    When You Come Back Down   0:51:44
+    (silence)                 0:56:22
+    Somebody More Like You    0:56:37
+    (talking)                 0:56:42
+15. The Fox                   1:00:02
+    (end)                     1:04:09
