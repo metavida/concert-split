@@ -7,16 +7,26 @@ Track Names: http://www.npr.org/2014/07/21/333725355/jenny-lewis-live-in-concert
 #   Track Name                Start At
 ==============                ========
     (intro)                   0:00:00
-1.  Just One Of The Guys      ?:??:??
-    Silver Lining             ?:??:??
-    Head Underwater           ?:??:??
-    Slippery Slopes           ?:??:??
-5.  The Moneymaker            ?:??:??
-    The Next Messiah          ?:??:??
-    A Man/Me/Then Jim         ?:??:??
-    Aloha & The Three Johns   ?:??:??
-    Rise Up With Fists!!      ?:??:??
-10. The New You               ?:??:??
-    Love U Forever            ?:??:??
-    Acid Tongue               ?:??:??
-13. She's Not Me              ?:??:??
+1.  Just One Of The Guys      0:00:28
+    Silver Lining             0:04:36
+    (silence)                 0:08:36
+    Head Underwater           0:08:51
+    (talking)                 0:13:05
+    Slippery Slopes           0:13:22.5
+5.  The Moneymaker            0:17:08
+    (interlude)               0:19:57
+    The Next Messiah          0:20:34
+    A Man/Me/Then Jim         0:28:57
+    (talking)                 0:34:48
+    Aloha & The Three Johns   0:35:16
+    (silence)                 0:39:00
+    Rise Up With Fists!!      0:39:08
+    (talking)                 0:42:52
+10. The New You               0:43:09
+    (talking)                 0:46:45
+    Love U Forever            0:47:02
+    (talking)                 0:51:30
+    Acid Tongue               0:51:45
+    (talking)                 0:55:53
+13. She's Not Me              0:56:09.5
+    (end)                     1:01:25
