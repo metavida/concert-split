@@ -8,13 +8,13 @@ Track Names: http://www.npr.org/2011/10/28/141801564/live-tuesday-st-vincent-in-
 #   Track Name                                          Start At
 ==============                                          ========
     (intro)                                             0:00:00
-1.  Surgeon                                             0:01:01
-    Cheerleader                                         0:05:56
+1.  Surgeon                                             0:01:00
+    Cheerleader                                         0:05:55
     Save Me From What I Want                            0:09:44
-    Actor Out of Work                                   0:13:52
-    (talking)                                           0:16:04
-5.  Chloe in the Afternoon                              0:17:00
-    (pause)                                             0:19:52
+    Actor Out of Work                                   0:13:51
+    (talking)                                           0:16:14
+5.  Chloe in the Afternoon                              0:16:59
+    (pause)                                             0:19:53
     Dilettante                                          0:20:20
     (talking)                                           0:24:21
     Cruel                                               0:26:42
