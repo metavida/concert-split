@@ -2,6 +2,7 @@
 *.aup
 *_data/
 *.mp3
+*.mp4
 *.m4a
 
 # Ignore all Audacity output
