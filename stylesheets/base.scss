@@ -132,8 +132,3 @@ hr {
   float: right;
   margin-left: 5px;
 }
-
-/* clearfix via http://perishablepress.com/press/2009/12/06/new-clearfix-hack/ */
-* html .clearfix { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; }  /* IE7 */
-.clearfix:after { display: block; visibility: hidden; clear: both; content: " "; height: 0; font-size: 0; } /* everyone else */
