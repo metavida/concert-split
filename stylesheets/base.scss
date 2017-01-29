@@ -1,0 +1,88 @@
+---
+---
+
+body {
+  margin-top: 1.0em;
+  background: #fff;
+  font-family: "Helvetica,Arial,FreeSans";
+  color: #000;
+}
+#container {
+  margin: 0 auto;
+  width: 700px;
+}
+h1, h1 a, h2, h2 a, h3, h3 a {
+  color: #333;
+}
+h1 {
+  font-size: 3.8em;
+  margin-bottom: 3px;
+
+  .small { font-size: 0.4em; }
+  a { text-decoration: none }
+}
+h2 { font-size: 1.5em; }
+h3 { font-size:1.2em; }
+a { color: #2f6b9e; }
+img { border: 0; }
+
+.description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-style: italic;
+}
+.download { float: right; }
+
+pre {
+  margin: 0;
+  padding: 15px;
+  background: #000;
+  color: #fff;
+}
+hr {
+  border: 0;
+  width: 80%;
+  border-bottom: 1px solid #aaa;
+}
+
+.details {
+  border-left: 5px solid #ccc; padding-left: 20px; }
+.current { margin: 0 -5px; padding: 0 5px; background: #fffde0; }
+.note { color: #f66; }
+
+#static_concerts { clear: both; }
+
+#description_icons {
+  & > div { position: relative; float: left; top: 20px; width: 15em; }
+
+  .music_big span { display: block; height: 2em; padding: 1em 0 0 55px; background: url(../images/audio_file.svg) no-repeat; }
+
+  .split_arrow {
+    width: 40px; height: 20px; margin: 1em 40px 0 10px; background: url(../images/arrow_right.svg) no-repeat; background-size: 70%;
+    span { color: white; color: rgba(0,0,0,0); font-size: 2px; }
+  }
+
+  .music_lil {
+    top: 0; margin-bottom: -1em;
+    & > span { display: block; margin: 3px 0; padding-left: 25px; background: url(../images/audio_file.svg) no-repeat; }
+
+    .lil_4 { opacity: .4; }
+    .lil_5 { opacity: .1; }
+  }
+}
+
+.footer {
+  text-align:center;
+  padding-top:30px;
+  font-style: italic;
+}
+.license img {
+  float: right;
+  margin-left: 5px;
+}
+
+/* clearfix via http://perishablepress.com/press/2009/12/06/new-clearfix-hack/ */
+* html .clearfix { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; }  /* IE7 */
+.clearfix:after { display: block; visibility: hidden; clear: both; content: " "; height: 0; font-size: 0; } /* everyone else */
