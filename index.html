@@ -9,18 +9,19 @@ published: true
   <meta name="author" content="Marcos Wright-Kuhns">
   <meta name="keywords" content="concert, audio, music, split, tracks, audacity, npr">
   <meta name="description" content="{% include meta_description.txt %}">
-  
+
   <title>The Concert-Split Project</title>
-  <link href="stylesheets/base.css?6" rel="stylesheet" type="text/css">
-  <link href="stylesheets/colorbox.css?3" rel="stylesheet" type="text/css">
+  <link href="{{ "/stylesheets/base.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet" type="text/css">
+  <link href="{{ "/stylesheets/colorbox.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:500|Source+Sans+Pro:300" rel="stylesheet">
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/jquery.colorbox-min.js?2"></script>
-  <script type="text/javascript" src="javascripts/jstorage.min.js?1"></script>
-  <script type="text/javascript" src="javascripts/base.js?8"></script>
+  <script type="text/javascript" src="{{ "/javascripts/jquery.colorbox-min.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+  <script type="text/javascript" src="{{ "/javascripts/jstorage.min.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+  <script type="text/javascript" src="{{ "/javascripts/base.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
 </head>
 <body>
 
-<div>
+<div id="github_fork">
   <a href="https://github.com/metavida/concert-split"><img style="position: absolute; top: 0; right: 0; border: 0;" src="//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 </div>
 
@@ -34,36 +35,30 @@ published: true
   <p>So, you've found a great, live concert recording on the <a href="http://www.npr.org/templates/rss/podlayer.php?id=510253">Live Concerts from All Songs Considered Podcast</a> &amp; listen to it all the time. The problem is that it's hard, if not impossible, to find any specific song in the hour-long recording. Plus, if it doesn't <a href="http://en.wiktionary.org/wiki/scrobble#Verb">scrobble</a>, it doesn't count.</p>
 
   <p>The Concert-Split Project is my attempt to solve this problem. Using <a href="#tools">Audacity</a> &amp; and a list of track &quot;labels,&quot; it's easy to split concert recordings into individual tracks. Perfect for your personal, casual listening.</p>
-  
-  <div id="description_icons" class="details clearfix">
+
+  <div id="description_icons" class="details">
     <div class="music_big">
       <span>
-        <img src="images/music_big.png" alt="A single music file">
         one-big-concert.mp3
       </span>
     </div>
     <div class="split_arrow">
-      <img src="images/arrow_right.png" alt="Becomes">
+      <span>becomes...</span>
     </div>
     <div class="music_lil">
       <span class="lil_1">
-        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 1.mp3
       </span>
       <span class="lil_2">
-        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 2.mp3
       </span>
       <span class="lil_3">
-        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 3.mp3
       </span>
       <span class="lil_4">
-        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 4.mp3
       </span>
       <span class="lil_5">
-        <img src="images/music_lil.png" alt="Many music files">
         big-concert track 5.mp3
       </span>
     </div>
@@ -76,27 +71,27 @@ published: true
         <img src="images/intro_video.jpg" width="300" height="193" alt="A quick video showing you how to use the Concert-Split Project.">
       </a>
     </div>
-  
+
     <p>
       First things first, find a concert that you're interested in splitting.
       <span id="no_js">You can browse &amp; download Audacity Label files <a href="https://github.com/metavida/concert-split/tree/master/All%20Songs%20Considered/">via the GitHub interface</a>.</span>
       <span id="has_js">The concerts, listed below, are ready to split.</span>
     </p>
-  
+
     <p>Now, watch the three minute screencast, at right, to get started.</p>
-  
+
     <p>If you don't see a concert you want to split, help us out. <a href="#contribute">Contribute to the project</a> by suggesting the concert.</p>
   </div>
-  
+
   <div id="concerts">
     <img id="concerts_loading" src="images/loading.gif" alt="Loading Data..." style="display:none;">
   </div>
   <div id="static_concerts">
     <p><span class="note">Note:</span> It looks your web browser isn't running JavaScript. Downloading the Audacity Label files for the following concerts requires JavaScript.</p>
-    
+
     {% include available_concerts.html %}
   </div>
-  
+
   <div id="tools">
     <h2>Required Tools</h2>
     <ul>
@@ -113,18 +108,20 @@ published: true
       <li><b>Collect set timestamps:</b> Once an issue has been submitted for a concert, we need to determine the beginning and end times for each track. I do this by opening the concert in Audacity while keeping <a href="https://github.com/metavida/concert-split/raw/master/Sample%20-%20Info%20-%20Set%20List.txt">the Set List</a> in a text editor. Note that the NPR podcasts add an extra advertisement to the front of each track, so I always download my concert audio directly from the <a href="http://www.npr.org/music/">NRP Music website</a> so that everyone's timestamps line up. Then, I listen through the concert &amp; mark down the end times for each song, as well as times for each intermission or lul in the concert. Once you've saved timestamps for each track, submit the full Set List as a comment on the appropriate GitHub issue.</li>
       <li><b>Generate the Audacity Label file:</b> Now, simply plug the track names &amp; timestamps into Audacity. Open the concert audio, then click <b>Tracks</b> &gt; <b>Edit Labels</b> and enter a label for each track. Finally go to <b>File</b> &gt; <b>Export Labels</b> to save the lable file. If you get the Audacity label file to me (sorry, the GitHub Issue tracker doesn't support attachments), I'll post it to the Project ASAP.</li>
     </ol>
-  
+
     <p>If you're a git user user, you can also <a href="https://github.com/metavida/concert-split">fork the project</a>, then follow the same steps above. Once you, commit a new set list or audacity labels, and send me a pull request. Please <em>never</em> add audio files, original or split, to this project. The project is intended to only contain set lists &amp; audacity label files.</p>
   </div>
 
   <h2>License</h2>
-  
+
   <p>
     <a class="license" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="//creativecommons.org/images/public/somerights20.png"></a>
     All text in the <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Concert-Split</span> Project, including Set Lists &amp; Audacity Lable files, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/" target="_blank">Creative Commons Attribution-Share Alike 3.0 United States License</a>.<br>
   </p>
-  
-  <p>Icons by <a href="http://www.fatcow.com/free-icons/index.bml">FatCow Web Hosting</a> / <a href="http://creativecommons.org/licenses/by/3.0/us/" target="_blank">CC BY 3.0</a></p>
+
+  <p>
+    Icons by <a href="http://www.flaticon.com/authors/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.
+  </p>
 
   <h2>Contributors</h2>
   <p>
@@ -151,15 +148,14 @@ published: true
 -->
 </div>
 
-<script type="text/javascript" src="javascripts/jquery.base64/jquery.base64.min.js?1"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-<script type="text/javascript" src="javascripts/downloadify/downloadify.min.js?1"></script>
+<script type="text/javascript" src="{{ "/javascripts/jquery.base64/jquery.base64.min.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+<script type="text/javascript" src="{{ "/javascripts/download/download.min.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
 
 <!-- Start of StatCounter Code -->
 <script type="text/javascript">
-var sc_project=5863656; 
-var sc_invisible=1; 
-var sc_security="294f8c69"; 
+var sc_project=5863656;
+var sc_invisible=1;
+var sc_security="294f8c69";
 </script>
 
 <script type="text/javascript"

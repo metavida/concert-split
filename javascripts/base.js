@@ -16,7 +16,7 @@ CSP = {
   // A global counter... the number of AJAX requests we're still waiting on
   // before the page render is considered complete.
   waitingOn: 0,
-  
+
   // When triggerd by a link's event, show an iframe pointing at the link's href
   showTutorialVideo: function(event) {
     event.stopPropagation();
@@ -25,58 +25,45 @@ CSP = {
     $.colorbox(opts);
     return false;
   },
-  
+
   // When triggered from a concert link, show a dialog containing the "Set List"
   // blob relating to that concert.
   showSetlist: function(event) {
     event.stopPropagation();
-    return CSP.showBlob($(this), {
-      download: "Download this set list if you're interested helping out. Then close this dialog and scroll down, to read more about contributing to the project.",
-      broken: "This set list hasn't yet been split. If you're intersted in helping out, close this dialog and scroll down, to read more about contributing to the project."
-    });
+    return CSP.showBlob($(this), [
+      "Download this set list", "if you're interested helping out. Then close this dialog and scroll down, to read more about contributing to the project."
+    ]);
   },
-  
+
   showAudacity: function(event) {
     event.stopPropagation();
-    return CSP.showBlob($(this), {
-      download: "Download these Audacity timestamps if you're interested in splitting this concert.",
-      broken: "Please copy the text, below, and save it in a text file on your computer. You can then import it into Audacity."
-    });
+    return CSP.showBlob($(this), [
+      "Download these Audacity timestamps", "if you're interested in splitting this concert."
+    ]);
   },
-  
-  showBlob: function(blob_el, messages) {
+
+  showBlob: function(blob_el, message) {
     var colorbox_opts = CSP.innerWidthAndHeight(),
       content = blob_el.data('content'),
       sha = blob_el.data('sha');
-      
+
     var render_blob = function(content) {
       var html = '',
         download_id_el = sha+'_download',
-        download_opts = {
-          swf:'javascripts/downloadify/downloadify.swf?1',
-          downloadImage:'images/download.png?1',
-          width:'100', height:'30',
-          filename:blob_el.html()+'.txt',
-          data:content,
-          dataType:'base64'
+        download_function = function() {
+          download($.base64.decode(content), blob_el.html()+'.txt', 'text/plain');
         };
       html += '<table>'+"\n";
       html += '<tr class="buttons">'+"\n";
-      html += '<td><div id="'+ download_id_el +'"></div></td>'+"\n";
-      html += '<td class="message"></td>'+"\n";
-      html += '<tr><td colspan="2"><div class="scroll"><pre>' + $.base64.decode(content) + '</pre></div></td></tr>'+"\n";
+      html += '<td><a id="'+ download_id_el +'" href="javascript:;">'+message[0]+'</a> '+message[1]+'</td>'+"\n";
+      html += '<tr><td><div class="scroll"><pre>' + $.base64.decode(content) + '</pre></div></td></tr>'+"\n";
       html += "</table>";
       $.extend(colorbox_opts, {
         fixed:true, scrolling:false,
         html:html,
         onComplete:function() {
-          if(swfobject.hasFlashPlayerVersion('10')) {
-            $('#'+download_id_el).downloadify(download_opts).
-              height(download_opts.height).parent().width(download_opts.width);
-            $('#cboxLoadedContent .message').html(messages.download);
-          } else {
-            $('#cboxLoadedContent .message').html(messages.broken);
-          }
+          $('#'+download_id_el).click(download_function);
+          $('#cboxLoadedContent .message').html(messages.download);
           $('#cboxLoadedContent .scroll').height(
             $('#cboxLoadedContent').height() - $('#cboxLoadedContent .buttons').outerHeight()
           ).width($('#cboxLoadedContent').width());
@@ -84,7 +71,7 @@ CSP = {
       });
       $.colorbox(colorbox_opts);
     };
-    
+
     if(content) {
       render_blob(content);
     } else if (sha) {
@@ -95,9 +82,9 @@ CSP = {
     }
     return false;
   },
-  
-  
-  
+
+
+
   // Hilight the area of HTML that the current URL anchor referrs to
   hilightCurrentAnchor: function() {
     var klass = 'current';
@@ -108,7 +95,7 @@ CSP = {
     }, 1);
     setTimeout(function() { $('.'+klass).removeClass(klass); }, 2000);
   },
-  
+
   // Return a Hash containing width & height values for $.colorbox based on
   // the current dimensions of the browser viewport.
   innerWidthAndHeight: function(ratio) {
@@ -118,23 +105,23 @@ CSP = {
       thisWidth = thisHeight / ratio;
     return {innerWidth:thisWidth, innerHeight:thisHeight};
   },
-  
+
   // Expire the local cache if all of the following conditions are met.
   // 1) The cache was populated a while back.
   // 2) The tree_root's git hash has changed.
   expireCache: function() {
     var last_update = $.jStorage.get('last_update'),
       last_sha = $.jStorage.get('last_sha'),
-      last_week = (new Date).getTime() - 604800000;
-    
+      last_week = (new Date()).getTime() - 604800000;
+
     if(last_update && last_update > last_week) {
       // If the last update was within a week then the cache is fresh.
       $(document).trigger('cache_is_fresh');
-      
+
     } else {
       // If the last update to the cache is from a while back, check
       // GitHub to see if there have been any recent commits.
-      
+
       CSP.waitingOn++;
       $.getJSON(commits_url + '&callback=?', function(data) {
         CSP.waitingOn--;
@@ -152,18 +139,18 @@ CSP = {
         }
         // The last time we made confirmed that the cache was freesh
         // was right now.
-        $.jStorage.set('last_update', (new Date).getTime());
-        
+        $.jStorage.set('last_update', (new Date()).getTime());
+
         $(document).trigger('cache_is_fresh');
       });
     }
   },
-  
+
   renderConcertTree: function() {
     var concerts_el = $('#concerts'),
       loading_el = $('#concerts_loading').show(),
       html = '';
-    
+
     $('#static_concerts').hide();
     CSP.getJSON(tree_url + '?callback=?', function(show_data) {
       data_tree = show_data.tree;
@@ -229,7 +216,7 @@ CSP = {
       });
     });
   },
-  
+
   getJSON: function(url, callback) {
     CSP.waitingOn++;
     var cached_data = $.jStorage.get(url),
@@ -262,16 +249,16 @@ $(document).ready(function() {
   $('#no_js').hide();
   $('#has_js').show();
   $("#intro_video").click(CSP.showTutorialVideo);
-  
+
   var loading_el = $('#concerts_loading'),
       waiting_id = setInterval(function() {
-        if(CSP.waitingOn == 0) {
+        if(CSP.waitingOn === 0) {
           clearInterval(waiting_id);
           loading_el.hide();
-      
+
           $('a[href*=#]').click(CSP.hilightCurrentAnchor);
         }
       }, 100);
-  
+
   CSP.hilightCurrentAnchor();
 });

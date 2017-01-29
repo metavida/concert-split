@@ -1,5 +1,6 @@
 # Ignore system files
 *.DS_Store
+Gemfile.lock
 
 # Ignore all concert data from the master branch
 All Songs Considered

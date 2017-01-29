@@ -1,3 +1,6 @@
 [submodule "javascripts/jquery.base64"]
 	path = javascripts/jquery.base64
-	url = git://github.com/carlo/jquery-base64.git
+	url = https://github.com/carlo/jquery-base64.git
+[submodule "javascripts/download"]
+	path = javascripts/download
+	url = https://github.com/rndme/download.git
