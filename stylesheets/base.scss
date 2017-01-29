@@ -4,7 +4,8 @@
 body {
   margin-top: 1.0em;
   background: #fff;
-  font-family: "Helvetica,Arial,FreeSans";
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2em;
   color: #000;
 }
 #container {
@@ -12,10 +13,11 @@ body {
   width: 700px;
 }
 h1, h1 a, h2, h2 a, h3, h3 a {
+  font-family: 'Quicksand', sans-serif;
   color: #333;
 }
 h1 {
-  font-size: 3.8em;
+  font-size: 3em;
   margin-bottom: 3px;
 
   .small { font-size: 0.4em; }
@@ -27,9 +29,7 @@ a { color: #2f6b9e; }
 img { border: 0; }
 
 .description {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin: 30px 0;
   font-style: italic;
 }
 .download { float: right; }
@@ -70,7 +70,7 @@ hr {
   .music_big span {
     display: block;
     height: 2em;
-    padding: 1em 0 0 55px;
+    padding: 1em 0 0 65px;
     background: url(../images/audio_file.svg) no-repeat;
   }
 
@@ -94,7 +94,7 @@ hr {
     & > span {
       display: block;
       margin: 3px 0;
-      padding-left: 25px;
+      padding-left: 28px;
       background: url(../images/audio_file.svg) no-repeat;
     }
 
