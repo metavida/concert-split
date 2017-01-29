@@ -20,11 +20,13 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 
 #static_concerts { clear: both; }
 
-#description_icons > div { position: relative; float: left; width: 15em; }
-#description_icons .music_big { top: 20px; }
-#description_icons .split_arrow { top: 25px; width: 10%; }
-#description_icons .music_lil { margin-bottom: -1em; }
-#description_icons .music_lil > span { display: block; }
+#description_icons > div { position: relative; float: left; top: 20px; width: 15em; }
+/*#description_icons .music_big { top: 20px; }*/
+#description_icons .music_big span { display: block; height: 2em; padding: 1em 0 0 55px; background: url(../images/audio_file.svg) no-repeat; }
+#description_icons .split_arrow { width: 40px; height: 20px; margin: 1em 40px 0 10px; background: url(../images/arrow_right.svg) no-repeat; background-size: 70%; }
+#description_icons .split_arrow span { color: white; color: rgba(0,0,0,0); font-size: 2px; }
+#description_icons .music_lil { top: 0; margin-bottom: -1em; }
+#description_icons .music_lil > span { display: block; margin: 3px 0; padding-left: 25px; background: url(../images/audio_file.svg) no-repeat; }
 #description_icons img { position: relative; vertical-align: bottom; }
 #description_icons .music_big img { top: 2px; }
 #description_icons .music_lil img { top: -3px; }
