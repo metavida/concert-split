@@ -10,8 +10,25 @@ body {
 }
 #container {
   margin: 0 auto;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
 }
+
+/* Handle smartphones */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  ul { font-size: .75em; }
+  #github_fork { display: none; }
+}
+/* Handle narrow desktop screens */
+@media only screen and (max-width : 700px) {
+  body { font-size: .9em; }
+  #github_fork { display: none; }
+}
+
 h1, h1 a, h2, h2 a, h3, h3 a {
   font-family: 'Quicksand', sans-serif;
   color: #333;
